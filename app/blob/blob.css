@@ -1,0 +1,29 @@
+*{
+    background-color: transparent;
+}
+
+.blob {
+    background: linear-gradient(to right, #2E92CA, #45FEE8);
+    height: 400px;
+    width: 400px;
+    filter: blur(20rem);
+    opacity: 0.8;
+    position: absolute;
+    z-index: 10;
+    /* aspect-ratio: 1; */
+    /* filter: blur(330px); */
+
+    /* transform: translate(-50%, -50%); */
+    /* border-radius: 50%; */
+    /* animation: rotate 20s infinite; */
+    /* opacity: 0.8; */
+}
+
+
+@media screen and (max-width: 600px) {
+    .blob{
+        display: none;
+    }
+    
+}
+
