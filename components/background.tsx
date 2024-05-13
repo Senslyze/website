@@ -17,9 +17,9 @@ const BackgroundGradientDemo: React.FC<BlobProps> = ({ position }) => {
   };
 
   return (
-    <div className="m-auto mt-10 flex max-w-[60vw] items-center justify-center bg-black">
-      <BackgroundGradient className="max-w-[80vw] rounded-[22px] bg-black p-4 text-justify text-white dark:bg-zinc-900 sm:p-8">
-        <div className="w-full space-y-6 leading-9">
+    <div className="container m-auto mt-10 flex items-center justify-center bg-black md:max-w-[66.66%]">
+      <BackgroundGradient className="max-w-[80vw] rounded-[22px] bg-black p-4 px-7 text-justify text-white dark:bg-zinc-900 sm:p-8">
+        <div className="w-full space-y-6 leading-6 md:leading-9">
           <h2 className="pb-10 text-center text-xl font-bold md:text-3xl">
             Welcome to Senslyze — Where Innovation Meets Impact
           </h2>

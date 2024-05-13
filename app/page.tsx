@@ -105,13 +105,14 @@ const App: React.FC = () => {
             <span className="text-[#B8ECFE]">ABOUT US</span>
           </div>
 
-          <div id="background-card" className="">
+          <div className="">
             <BackgroundGradientDemo></BackgroundGradientDemo>
           </div>
         </div>
       </div>
 
       {/* ======= */}
+      <div className="my-20 md:m-0"></div>
 
       <div
         id="ContactsUs"
@@ -121,7 +122,7 @@ const App: React.FC = () => {
           <span className="text-[#B8ECFE]">CONTACT US</span>
         </div>
 
-        <div className="relative w-2/3">
+        <div className="container relative md:max-w-[66.66%]">
           <Form></Form>
         </div>
       </div>
