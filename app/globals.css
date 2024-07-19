@@ -3,6 +3,17 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+@layer utilities {
+  .gradient-text-t {
+    @apply bg-gradient-to-t from-blue-300 to-white text-transparent bg-clip-text;
+  }
+
+  .gradient-text-r {
+    @apply bg-gradient-to-r from-blue-300 to-white text-transparent bg-clip-text;
+  }
+
+}
+
 @media screen and (max-width: 350px) {
   .wrapper {
     width: 100%;
@@ -53,6 +64,7 @@ body {
   --pink: #01c7ff;
   --radius: 1rem;
 }
+
 /* .logo-container {
     position: relative;
     
@@ -69,6 +81,7 @@ body {
 }
 
 @keyframes scale {
+
   from,
   to {
     transform: scale(0);
@@ -91,13 +104,11 @@ body {
 
 .Senslyzeimage {
   animation: background-pan 3s linear infinite;
-  background: linear-gradient(
-    to right,
-    var(--purple),
-    var(--violet),
-    var(--pink),
-    var(--purple)
-  );
+  background: linear-gradient(to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple));
   color: transparent;
   background-size: 200%;
   background-clip: text;

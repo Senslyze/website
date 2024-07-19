@@ -5,6 +5,7 @@ import vactor1 from "@/app/assets/Vector-1.svg";
 import vactor2 from "@/app/assets/Vector-2.svg";
 import vactor3 from "@/app/assets/Vector-3.svg";
 import vactor4 from "@/app/assets/Vector.svg";
+import Link from "next/link";
 
 const Footer = () => {
   const link1 = "https://twitter.com/senslyze";
@@ -194,8 +195,8 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-2 items-center mt-2">
             <p className="text-xs text-slate-300">English</p>
-            <p className="text-xs text-slate-300">TOU</p>
-            <p className="text-xs text-slate-300">Privacy</p>
+            <Link href={"/terms-and-conditions"} className="text-xs text-slate-300">Terms & Condiditons</Link>
+            <Link href={"/privacy-policy"} className="text-xs text-slate-300">Privacy Policy</Link>
             <p className="text-xs text-slate-300">Community</p>
             <p className="text-xs text-slate-300">Cookie preferences</p>
           </div>
@@ -289,8 +290,8 @@ const Footer = () => {
           </div>
           <div className="flex gap-4">
             <p className="text-xs text-slate-300">English</p>
-            <p className="text-xs text-slate-300">TOU</p>
-            <p className="text-xs text-slate-300">Privacy</p>
+            <Link href={"/terms-and-conditions"} className="text-xs text-slate-300">Terms & Condiditons</Link>
+            <Link href={"/privacy-policy"} className="text-xs text-slate-300">Privacy Policy</Link>
             <p className="text-xs text-slate-300">Community</p>
             <p className="text-xs text-slate-300">Cookie preferences</p>
           </div>
