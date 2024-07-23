@@ -17,6 +17,7 @@ import menu from "@/app/assets/menu_icon.svg";
 
 import { Button } from "@/components/ui/moving-border";
 import BackgroundGradientDemo from "@/components/background";
+import ProductGrid from "@/components/ui/product-grid";
 import Form from "@/components/form";
 import "@/app/script.js";
 import Footers from "@/components/footer";
@@ -113,6 +114,19 @@ const App: React.FC = () => {
 
       {/* ======= */}
       <div className="my-20 md:m-0"></div>
+
+      <div
+        id="ContactsUs"
+        className="flex  min-h-screen w-full flex-col items-center justify-center"
+      >
+        <div className="wrapper">
+          <span className="text-[#B8ECFE]">PRODUCTS</span>
+        </div>
+
+        <div className="container relative md:max-w-[66.66%]">
+          <ProductGrid></ProductGrid>
+        </div>
+      </div>
 
       <div
         id="ContactsUs"

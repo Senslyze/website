@@ -128,6 +128,45 @@ body {
   transform: translate(-50%, -50%);
 }
 
+
+.Senslyzeimage1 {
+  background: linear-gradient(to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple));
+  color: transparent;
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  align-items: center;
+}
+
+.Senslyzeimage2 {
+  background: linear-gradient(to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple));
+  color: transparent;
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  align-items: center;
+}
+
 @media screen and (max-width: 300px) {
   .Senslyzeimage {
     font-size: 65px;
