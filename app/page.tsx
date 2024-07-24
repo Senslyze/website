@@ -21,6 +21,7 @@ import ProductGrid from "@/components/ui/product-grid";
 import Form from "@/components/form";
 import "@/app/script.js";
 import Footers from "@/components/footer";
+import ServiceGrid from "@/components/ServiceGrid";
 // import Foot from "@/components/Footernew";
 
 const App: React.FC = () => {
@@ -106,13 +107,28 @@ const App: React.FC = () => {
             <span className="text-[#B8ECFE]">ABOUT US</span>
           </div>
 
-          <div className="">
+          <div>
             <BackgroundGradientDemo></BackgroundGradientDemo>
           </div>
         </div>
       </div>
 
       {/* ======= */}
+      <div className="my-20 md:m-0"></div>
+
+      <div
+        id="ContactsUs"
+        className="flex  min-h-screen w-full flex-col items-center justify-center"
+      >
+        <div className="wrapper">
+          <span className="text-[#B8ECFE]">OUR SERVICES</span>
+        </div>
+
+        <div className="container relative md:max-w-[66.66%]">
+          <ServiceGrid></ServiceGrid>
+        </div>
+      </div>
+
       <div className="my-20 md:m-0"></div>
 
       <div
@@ -128,6 +144,8 @@ const App: React.FC = () => {
         </div>
       </div>
 
+    <div className="my-20 md:m-0"></div>
+    
       <div
         id="ContactsUs"
         className="flex  min-h-screen w-full flex-col items-center justify-center "
