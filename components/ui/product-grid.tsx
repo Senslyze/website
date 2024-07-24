@@ -15,7 +15,7 @@ const ProductGrid = () => {
     <div className="flex flex-col gap-4">
       {/* First row - 2 boxes */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="bg-[#2A2A2A] p-4 rounded-md flex flex-col">
+        <div className="border-2 border-[#2A2A2A] hover:border-[#0047ff] p-4 rounded-md flex flex-col">
           <div className="relative overflow-hidden h-60 md:h-80 mb-4">
             <Image
               className="rounded-md transition-opacity duration-300 absolute inset-0"
@@ -41,7 +41,7 @@ const ProductGrid = () => {
           </div>
         </div>
 
-        <div className="bg-[#2A2A2A] p-4 rounded-md flex flex-col">
+        <div className="border-2 border-[#2A2A2A] hover:border-[#0047ff] p-4 rounded-md flex flex-col">
           <div className="relative overflow-hidden h-60 md:h-80 mb-4">
             <Image
               className="rounded-md transition-opacity duration-300 absolute inset-0"
@@ -71,7 +71,7 @@ const ProductGrid = () => {
 
       {/* Second row - 3 boxes */}
       <div className="grid grid-cols-1 md:grid-cols-7 gap-4">
-        <div className="bg-[#2A2A2A] p-4 rounded-md flex flex-col md:col-span-2">
+        <div className="border-2 border-[#2A2A2A] hover:border-[#0047ff] p-4 rounded-md flex flex-col md:col-span-2">
           <div className="relative overflow-hidden h-60 md:h-80 mb-4">
             {/* <Image className='rounded-md transition-opacity duration-300 absolute inset-0' src={Box3Image1} alt="" />
       <Image className='rounded-md transition-opacity duration-300 absolute inset-0 opacity-0 hover:opacity-100' src={Box3Image2} alt="" /> */}
@@ -89,7 +89,7 @@ const ProductGrid = () => {
           </div>
         </div>
 
-        <div className="bg-[#2A2A2A] p-4 rounded-md flex flex-col md:col-span-2">
+        <div className="border-2 border-[#2A2A2A] hover:border-[#0047ff] p-4 rounded-md flex flex-col md:col-span-2">
           <div className="relative overflow-hidden h-60 md:h-80 mb-4">
             {/* <Image className='rounded-md transition-opacity duration-300 absolute inset-0' src={Box4Image1} alt="" /> */}
             {/* <Image className='rounded-md transition-opacity duration-300 absolute inset-0 opacity-0 hover:opacity-100' src={Box4Image2} alt="" /> */}
@@ -107,7 +107,7 @@ const ProductGrid = () => {
           </div>
         </div>
 
-        <div className="bg-[#2A2A2A] p-4 rounded-md flex flex-col md:col-span-3">
+        <div className="border-2 border-[#2A2A2A] hover:border-[#0047ff] p-4 rounded-md flex flex-col md:col-span-3">
           <div className="relative overflow-hidden h-60 md:h-80 mb-4">
             <Image className='rounded-md transition-opacity duration-300 absolute inset-0' src={blog1} alt="" />
       <Image className='rounded-md transition-opacity duration-300 absolute inset-0 opacity-0 hover:opacity-100' src={blog2} alt="" />
