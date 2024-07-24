@@ -22,7 +22,7 @@ function TermsAndConditions() {
           <ol className="space-y-6">
             <li>
               <span className="blue"> 1. Limited License</span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">Senslyze grants you a non-exclusive, non-transferable, limited right to access, use, and display this Website and the materials thereon for personal and informational purposes only. You may not use the Website for any commercial purposes without obtaining prior written consent from Senslyze.</span></li>
               </ul>
             </li>
@@ -56,7 +56,7 @@ function TermsAndConditions() {
               <span className="text-blue-300">
                 1. Ownership
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">The design, layout, code, and content of this Website, along with all material present (excluding third-party materials), are the exclusive property of Senslyze and are protected by copyright, trademark, and other intellectual property laws. Copying, reproducing in whole or in part, or creating derivative works in any form or medium without express written permission is prohibited.</span></li>
               </ul>
             </li>
@@ -65,7 +65,7 @@ function TermsAndConditions() {
               <span className="blue">
                 2. Trademarks
               </span>
-              <ul>
+              <ul className="list-none">
                 <li className="contetn"><span className="content">Senslyze’s logo is a registered trademark of Senslyze and is protected by trademark laws. Senslyze and the names of Senslyze’s products referenced on this Website are trademarks of Senslyze. Other products and company names mentioned herein may be trademarks and/or service marks of their respective owners and are acknowledged as such without prejudice.</span></li>
               </ul>
             </li>
@@ -80,7 +80,7 @@ function TermsAndConditions() {
               <span className="text-blue-300">
                 1. External Links
               </span>
-              <ul>
+               <ul className="list-none">
                 <li><span className="content">The Website may contain links to third-party websites or resources. Senslyze is not responsible for the content, accuracy, or opinions expressed on such websites. Accessing these links is at your own risk, and Senslyze is not liable for any damages or losses arising from your use of third-party websites.</span></li>
               </ul>
             </li>
@@ -89,7 +89,7 @@ function TermsAndConditions() {
               <span className="blue">
                 2. Third-Party Content
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">The Website may make available information or material provided by third parties. Senslyze does not endorse, warrant, or guarantee the accuracy, completeness, or usefulness of such third-party content. Your reliance on any third-party content is at your own risk.</span></li>
               </ul>
             </li>
@@ -109,7 +109,7 @@ function TermsAndConditions() {
               <span className="blue">
                 1. Indemnification
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">You agree to indemnify, defend, and hold harmless Senslyze, its subsidiaries, and affiliates from any claim, cost, expense, judgment, damages, or other loss arising out of or in relation to your use of this Website in any manner.</span></li>
               </ul>
             </li>
@@ -118,7 +118,7 @@ function TermsAndConditions() {
               <span className="blue">
                 2. Limitation of Liability
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">The entire risk arising out of the use of this Website, its contents, or materials downloaded therefrom remains with the user. In no event shall Senslyze be liable for any direct, consequential, incidental, special, punitive, or other damages whatsoever (including without limitation, damages for loss of business profits, business interruption, or loss of business information) arising out of or in connection with your use or access to the Website (including without limitation non-availability of the Website) even if Senslyze has been advised of the possibility of such damages.</span></li>
               </ul>
             </li>
@@ -127,7 +127,7 @@ function TermsAndConditions() {
               <span className="blue">
                 3. Deletion
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">You can request the deletion of your personal data, subject to certain legal obligations that may require us to retain specific information for a designated period.</span></li>
               </ul>
             </li>

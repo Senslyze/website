@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="w-full flex items-center justify-center bg-transparent h-[46px] fixed top-0 z-30 mt-4">
       <div className="w-full flex items-center justify-center ">
-        <nav className="sm:block hidden navbar max-w-[400px] w-full bg-red-400 h-full">
+        <nav className="sm:block hidden navbar max-w-[600px] w-full bg-red-400 h-full">
           <ul className="flex h-full px-[1rem] items-center justify-between">
             <li
               className="relative"
@@ -47,6 +47,27 @@ const Navbar: React.FC = () => {
                 })}
               ></span>
             </li>
+
+            <li className="relative" onClick={() => handleItemClick("OurServices")}>
+              Our Services
+              <span
+                className={cn({
+                  "absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px":
+                    activeItem == "OurServices",
+                })}
+              ></span>
+            </li>
+
+            <li className="relative" onClick={() => handleItemClick("Products")}>
+              Products
+              <span
+                className={cn({
+                  "absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px":
+                    activeItem == "Products",
+                })}
+              ></span>
+            </li>
+
             <li
               className="relative"
               onClick={() => handleItemClick("ContactsUs")}
@@ -92,6 +113,24 @@ const Navbar: React.FC = () => {
               onClick={() => handleItemClick("AboutUs")}
             >
               <p className="p-4 border-gray-200">About Us</p>
+            </li>
+          </div>
+
+          <div className=" px-1 flex items-center">
+            <li
+              className={activeItem === "ContactsUs" ? "active" : ""}
+              onClick={() => handleItemClick("ContactsUs")}
+            >
+              <p className="p-4 border-gray-200">Our Services</p>
+            </li>
+          </div>
+
+          <div className=" px-1 flex items-center">
+            <li
+              className={activeItem === "ContactsUs" ? "active" : ""}
+              onClick={() => handleItemClick("ContactsUs")}
+            >
+              <p className="p-4 border-gray-200">Products</p>
             </li>
           </div>
 

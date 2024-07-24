@@ -117,7 +117,7 @@ const App: React.FC = () => {
       <div className="my-20 md:m-0"></div>
 
       <div
-        id="ContactsUs"
+        id="OurServices"
         className="flex  min-h-screen w-full flex-col items-center justify-center"
       >
         <div className="wrapper">
@@ -132,7 +132,7 @@ const App: React.FC = () => {
       <div className="my-20 md:m-0"></div>
 
       <div
-        id="ContactsUs"
+        id="Products"
         className="flex  min-h-screen w-full flex-col items-center justify-center"
       >
         <div className="wrapper">
