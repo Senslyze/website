@@ -104,7 +104,7 @@ const App: React.FC = () => {
       <div id="AboutUs" className="flex min-h-screen items-center">
         <div className="mx-auto flex w-full flex-col">
           <div className="wrapper">
-            <span className="text-[#B8ECFE]">ABOUT US</span>
+            {/* <span className="text-[#B8ECFE]">ABOUT US</span> */}
           </div>
 
           <div>
@@ -114,44 +114,44 @@ const App: React.FC = () => {
       </div>
 
       {/* ======= */}
-      <div className="my-20 md:m-0"></div>
+      <div className="my-20 md:mt-40"></div>
 
       <div
         id="OurServices"
         className="flex  min-h-screen w-full flex-col items-center justify-center"
       >
         <div className="wrapper">
-          <span className="text-[#B8ECFE]">OUR SERVICES</span>
+          <span className="bg-gradient-to-r text-transparent bg-clip-text from-[#00ffff] to-[#0047ff]">Our Services</span>
         </div>
 
-        <div className="container relative md:max-w-[66.66%]">
+        <div className="container md:mt-[4rem] relative md:max-w-[80%]">
           <ServiceGrid></ServiceGrid>
         </div>
       </div>
 
-      <div className="my-20 md:m-0"></div>
+      <div className="my-20 md:mt-40"></div>
 
       <div
         id="Products"
         className="flex  min-h-screen w-full flex-col items-center justify-center"
       >
         <div className="wrapper">
-          <span className="text-[#B8ECFE]">PRODUCTS</span>
+          <span className="bg-gradient-to-r text-transparent bg-clip-text from-[#00ffff] to-[#0047ff]">Products</span>
         </div>
 
-        <div className="container relative md:max-w-[66.66%]">
+        <div className="container md:mt-[4rem]  relative md:max-w-[66.66%]">
           <ProductGrid></ProductGrid>
         </div>
       </div>
 
-    <div className="my-20 md:m-0"></div>
+      <div className="my-20 md:mt-40"></div>
     
       <div
         id="ContactsUs"
         className="flex  min-h-screen w-full flex-col items-center justify-center "
       >
         <div className="wrapper">
-          <span className="text-[#B8ECFE]">CONTACT US</span>
+          <span className="bg-gradient-to-r text-transparent bg-clip-text from-[#00ffff] to-[#0047ff]">Contact Us</span>
         </div>
 
         <div className="container relative md:max-w-[66.66%]">

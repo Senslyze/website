@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
 
           <div className=" px-1 flex items-center">
             <li
-              className={activeItem === "Senslyze" ? "active" : ""}
+              className={activeItem === "AboutUs" ? "active" : ""}
               onClick={() => handleItemClick("AboutUs")}
             >
               <p className="p-4 border-gray-200">About Us</p>
@@ -118,8 +118,8 @@ const Navbar: React.FC = () => {
 
           <div className=" px-1 flex items-center">
             <li
-              className={activeItem === "ContactsUs" ? "active" : ""}
-              onClick={() => handleItemClick("ContactsUs")}
+              className={activeItem === "OurServices" ? "active" : ""}
+              onClick={() => handleItemClick("OurServices")}
             >
               <p className="p-4 border-gray-200">Our Services</p>
             </li>
@@ -127,8 +127,8 @@ const Navbar: React.FC = () => {
 
           <div className=" px-1 flex items-center">
             <li
-              className={activeItem === "ContactsUs" ? "active" : ""}
-              onClick={() => handleItemClick("ContactsUs")}
+              className={activeItem === "Products" ? "active" : ""}
+              onClick={() => handleItemClick("Products")}
             >
               <p className="p-4 border-gray-200">Products</p>
             </li>

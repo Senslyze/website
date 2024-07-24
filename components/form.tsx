@@ -280,7 +280,7 @@ function Form() {
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer className="mb-4">
             <Label htmlFor="email">E-Mail</Label>
-            <Input id="email" placeholder="@gmail.com" type="email" />
+            <Input id="email" name="email" placeholder="Ex. johndoe@gmail.com" type="email" />
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="phone">Phone Number</Label>
