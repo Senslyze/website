@@ -139,9 +139,9 @@ const App: React.FC = () => {
           <span className="bg-gradient-to-r text-transparent bg-clip-text from-[#00ffff] to-[#0047ff]">Products</span>
         </div>
 
-        <div className="container md:mt-[4rem]  relative md:max-w-[66.66%]">
+        {/* <div className="container md:mt-[4rem]  relative md:max-w-[66.66%]">
           <ProductGrid></ProductGrid>
-        </div>
+        </div> */}
       </div>
 
       <div className="my-20 md:mt-40"></div>
