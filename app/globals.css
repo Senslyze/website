@@ -128,7 +128,38 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.custom-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 20px;
+  border: 2px solid white;
+  background-color: transparent;
+}
 
+@media (min-width: 768px) {
+  .custom-checkbox {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.custom-checkbox:checked {
+  background-color: #000;
+  border-color: #FFF;
+}
+
+.custom-checkbox:checked::before {
+  content: '\2714';
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .Senslyzeimage1 {
   background: linear-gradient(to right,
       var(--purple),

@@ -4,6 +4,16 @@ import Link from "next/link";
 
 
 function TermsAndConditions() {
+
+  const BottomGradient = () => {
+    return (
+      <>
+        <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
+        <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+      </>
+    );
+  };
+
   return (
     <main className="text-white relative min-h-screen flex pb-6">
 
@@ -171,6 +181,32 @@ function TermsAndConditions() {
           <h2>Copyright © 2024 Senslyze Inc. All rights reserved.</h2>
           <div className="content">This Privacy Policy complies with Indian laws, including the Information Technology Act, 2000, and the rules thereunder.</div>
         </section>
+
+
+        <div className="md:mt-[35px]">
+        <div className="flex items-center gap-4">
+        <input className="custom-checkbox" type="checkbox" />
+
+          <h2 className="text-[#FFF] text-[12px] content">By clicking, you agree to our Terms of Service and that you have read our Privacy Policy.</h2>
+        </div>
+            
+          <br/>
+
+        <div className="flex items-center gap-4">
+        <input className="custom-checkbox" type="checkbox" />
+
+          <h2 className="text-[#FFF] text-[12px] content">I hereby authorise to send notifications on SMS/ Messages/Promotional /informational messages</h2>
+        </div>
+     </div>
+
+        <button
+          className="mx-auto mt-[20px] md:mt-[45px] w-[155px] h-[50px] rounded-md bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800  text-white font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          type="submit"
+        >
+          Submit
+          <BottomGradient/>
+        </button>
+
       </article>
 
 

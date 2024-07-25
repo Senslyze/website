@@ -88,13 +88,30 @@ function Form() {
           />
         </LabelInputContainer>
 
+     <div className="md:mt-[20px]">
+        <div className="flex items-center gap-4">
+        <input className="custom-checkbox" type="checkbox" />
+
+          <h2 className="text-[#FFF] text-[12px]">By clicking, you agree to our Terms of Service and that you have read our Privacy Policy.</h2>
+        </div>
+            
+          <br/>
+
+        <div className="flex items-center gap-4">
+        <input className="custom-checkbox" type="checkbox" />
+
+          <h2 className="text-[#FFF] text-[12px]">I hereby authorise to send notifications on SMS/ Messages/Promotional /informational messages</h2>
+        </div>
+     </div>
+
         <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="mx-auto mt-[20px] md:mt-[50px] w-[155px] h-[50px] rounded-md bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800  text-white font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
         >
-          Submit &rarr;
+          Submit
           <BottomGradient />
         </button>
+
       </form>
     </div>
   );
