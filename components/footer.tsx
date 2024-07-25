@@ -195,7 +195,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-2 items-center mt-2">
             <p className="text-xs text-slate-300">English</p>
-            <Link href={"/terms-and-conditions"} className="text-xs text-slate-300">Terms & Condiditons</Link>
+            <Link href={"/terms-and-conditions"} className="text-xs text-slate-300">Terms & Conditions</Link>
             <Link href={"/privacy-policy"} className="text-xs text-slate-300">Privacy Policy</Link>
             <p className="text-xs text-slate-300">Community</p>
             <p className="text-xs text-slate-300">Cookie preferences</p>
@@ -290,7 +290,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-4">
             <p className="text-xs text-slate-300">English</p>
-            <Link href={"/terms-and-conditions"} className="text-xs text-slate-300">Terms & Condiditons</Link>
+            <Link href={"/terms-and-conditions"} className="text-xs text-slate-300">Terms & Conditions</Link>
             <Link href={"/privacy-policy"} className="text-xs text-slate-300">Privacy Policy</Link>
             <p className="text-xs text-slate-300">Community</p>
             <p className="text-xs text-slate-300">Cookie preferences</p>
