@@ -33,7 +33,7 @@ function PrivacyPolicyPage() {
           <ol className="space-y-6">
             <li>
               <span className="blue"> 1. Personal Information </span>
-              <ul className="space-y-2">
+              <ul className="space-y-2 list-none">
                 <li><span className="blue">Contact Information</span>: <span className="content">We may collect your name, email address, phone number, and mailing address when you interact with our Website or services.</span></li>
                 <li><span className="blue">Identification Information</span>: <span className="content">To verify your identity, we might collect your date of birth and government-issued identification numbers.</span></li>
               </ul>
@@ -43,7 +43,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 2. Non-Personal Information
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="blue">Usage Data</span>: <span className="content">We automatically collect information about how you use our Website, such as your IP address, browser type, operating system, access times, and the referring URL.</span></li>
                 <li><span className="blue">Cookies and Tracking Technologies</span>: <span className="content">We use cookies, web beacons, and other tracking technologies to collect data on your interaction with our Website, enhancing your user experience and delivering personalized content.</span></li>
               </ul>
@@ -58,7 +58,7 @@ function PrivacyPolicyPage() {
               <span className="text-blue-300">
                 1. Business Information
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="blue">Company Details</span>: <span className="content">We may collect your company name, industry, and other business-related information.</span></li>
                 <li><span className="blue">Project Information</span>: <span className="content">We collect information about your project requirements, objectives, and any other relevant details necessary for providing our services.</span></li>
               </ul>
@@ -68,7 +68,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 2. Client Communication
               </span>
-              <ul>
+              <ul className="list-none">
                 <li className="!list-disc"><span className="blue">Correspondence</span>: <span className="content">We keep records of all communications with our clients, including emails, phone calls, and meeting notes.</span></li>
               </ul>
             </li>
@@ -83,7 +83,7 @@ function PrivacyPolicyPage() {
               <span className="text-blue-300">
                 1. To Provide Services
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">We use your information to process and manage your requests, orders, and payments, ensuring seamless service delivery.</span></li>
                 <li><span className="content">We communicate with you about our services, updates, and any issues related to your transactions.</span></li>
               </ul>
@@ -93,7 +93,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 2. For Marketing and Promotional Purposes
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">With your consent, we send you promotional materials, newsletters, and other information about our services and products that might interest you.</span></li>
                 <li><span className="content">We use the information to personalize your experience and provide recommendations based on your preferences.</span></li>
               </ul>
@@ -103,7 +103,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 3. To Improve Our Services
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">We analyze usage trends and gather statistical information to enhance our Website’s functionality and improve our services.</span></li>
                 <li><span className="content">We use feedback and data to develop new features and offerings that better serve your needs.</span></li>
               </ul>
@@ -113,7 +113,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 4. For Legal and Compliance Purposes
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">We use your information to comply with legal obligations, resolve disputes, and enforce our agreements.</span></li>
                 <li><span className="content">We ensure that our practices are in line with regulatory requirements and protect against legal claims.</span></li>
               </ul>
@@ -127,7 +127,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 1. With Service Providers
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">We may share your information with third-party service providers who assist us with payment processing, data analysis, email delivery, and other essential services. These providers are bound by confidentiality agreements and are not permitted to use your information for any other purpose.</span></li>
               </ul>
             </li>
@@ -136,7 +136,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 2. With Affiliates and Partners
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">We may share your information with our affiliates and partners for joint marketing and promotional activities. These entities are required to adhere to privacy practices consistent with ours.</span></li>
               </ul>
             </li>
@@ -145,7 +145,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 3. For Legal Reasons
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">We may disclose your information if required by law or if we believe that such action is necessary to protect our rights, privacy, safety, or property, and/or that of our affiliates, you, or others.</span></li>
               </ul>
             </li>
@@ -164,7 +164,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 1. Access and Correction
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">You have the right to access and correct the personal information we hold about you. You can request updates or corrections to ensure your information is accurate and complete.</span></li>
               </ul>
             </li>
@@ -173,7 +173,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 2. Data Portability
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">You can request a copy of your personal data in a structured, commonly used, and machine-readable format. This allows you to transfer your data to another service provider if desired.</span></li>
               </ul>
             </li>
@@ -182,7 +182,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 3. Deletion
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">You can request the deletion of your personal data, subject to certain legal obligations that may require us to retain specific information for a designated period.</span></li>
               </ul>
             </li>
@@ -191,7 +191,7 @@ function PrivacyPolicyPage() {
               <span className="blue">
                 3. Withdrawal of Consent
               </span>
-              <ul>
+              <ul className="list-none">
                 <li><span className="content">You can withdraw your consent to the processing of your personal data at any time. However, this will not affect the lawfulness of any processing carried out before you withdraw your consent.</span></li>
               </ul>
             </li>

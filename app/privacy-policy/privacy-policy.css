@@ -10,12 +10,11 @@ h2 {
   font-weight: 700;
 }
 
-ul {
+/* ul {
   padding-left: 2.5rem
-    /* 40px */
   ;
   list-style-type: disc;
-}
+} */
 
 li:only-child {
   list-style: none;
