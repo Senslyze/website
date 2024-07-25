@@ -1,6 +1,9 @@
+"use client";
 import Blob from "@/app/blob/page";
 import "./privacy-policy.css"
 import Link from "next/link";
+import Footers from "@/components/footer";
+import Form from "@/components/form";
 
 function PrivacyPolicyPage() {
   const BottomGradient = () => {
@@ -15,17 +18,17 @@ function PrivacyPolicyPage() {
   return (
     <main className="text-white relative min-h-screen flex pb-6">
 
-      <article className="max-w-2xl mx-auto flex flex-col items-center space-y-8 *:space-y-2">
+      <article className="w-full mx-auto flex flex-col items-center space-y-8 *:space-y-2">
         <h1 className="text-7xl font-extrabold gradient-text-t py-14 whitespace-nowrap">
           P<span className="text-4xl font-bold">RIVACY</span> P<span className="text-4xl font-bold">OLICY</span>
         </h1>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Introduction</h2>
           <h3 className="text-slate-400 text-sm leading-6 tracking-wider">At Senslyze Inc. ("Senslyze," "we," "our," or "us"), your privacy is of utmost importance to us. We are dedicated to protecting the personal information you share with us. This Privacy Policy outlines our practices concerning the collection, use, disclosure, and safeguarding of your information when you visit our website <Link href={"/"} className="text-blue-200"><u>Senslyze.com</u></Link> and use our services. By accessing or using our Website, you agree to the terms of this Privacy Policy.</h3>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Information We Collect</h2>
           <ol className="space-y-6">
             <li>
@@ -48,7 +51,7 @@ function PrivacyPolicyPage() {
           </ol>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Information We Collect from Clients</h2>
           <ol>
             <li>
@@ -73,7 +76,7 @@ function PrivacyPolicyPage() {
         </section>
 
 
-        <section>
+        <section className="max-w-2xl">
           <h2>How We Use Your Information</h2>
           <ol>
             <li>
@@ -118,7 +121,7 @@ function PrivacyPolicyPage() {
           </ol>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <ol>
             <li>
               <span className="blue">
@@ -149,12 +152,12 @@ function PrivacyPolicyPage() {
           </ol>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Data Securtiy</h2>
           <div className="content">We implement reasonable security measures to protect your information from unauthorized access, use, or disclosure. These measures include encryption, access controls, and secure hosting environments. However, please note that no internet-based site can be 100% secure, and we cannot guarantee absolute security.</div>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Your Rights</h2>
           <ol>
             <li>
@@ -195,22 +198,22 @@ function PrivacyPolicyPage() {
           </ol>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Cookies and Tracking Technologies</h2>
           <div className="content">Our Website uses cookies and similar tracking technologies to enhance your experience, analyze usage patterns, and deliver personalized content. You can control cookies through your browser settings. However, disabling cookies may affect the functionality and features of our Website.</div>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Changes to This Privacy Policy</h2>
           <div className="content">We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. Any changes will be posted on this page with an updated revision date. Your continued use of the Website after any changes indicates your acceptance of the revised Privacy Policy.</div>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Contact Us</h2>
           <div className="content">If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</div>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Senslyze Inc.</h2>
           <div className="content">
             Address: Plot No.14 ,SBI Colony,
@@ -223,39 +226,40 @@ function PrivacyPolicyPage() {
 
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Jurisdiction</h2>
           <div className="content">This Privacy Policy shall be governed by the laws of India. Any dispute arising from this Privacy Policy shall be subject to the exclusive jurisdiction of the courts at Nagpur, Maharashtra, India.</div>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Copyright © 2024 Senslyze Inc. All rights reserved.</h2>
           <div className="content">This Privacy Policy complies with Indian laws, including the Information Technology Act, 2000, and the rules thereunder.</div>
         </section>
 
-        <div className="md:mt-[35px]">
-        <div className="flex items-center gap-4">
-        <input className="custom-checkbox" type="checkbox" />
-
-          <h2 className="text-[#FFF] text-[12px] content">By clicking, you agree to our Terms of Service and that you have read our Privacy Policy.</h2>
+        <div
+        id="ContactsUs"
+        className="flex  min-h-screen w-full flex-col items-center justify-center "
+      >
+        <div className="wrapper">
+          <span className="bg-gradient-to-r text-transparent bg-clip-text from-[#00ffff] to-[#0047ff]">Contact Us</span>
         </div>
-            
-          <br/>
 
-        <div className="flex items-center gap-4">
-        <input className="custom-checkbox" type="checkbox" />
-
-          <h2 className="text-[#FFF] text-[12px] content">I hereby authorise to send notifications on SMS/ Messages/Promotional /informational messages</h2>
+        <div className="container relative md:max-w-[66.66%]">
+          <Form></Form>
         </div>
-     </div>
+      </div>
 
-        <button
-          className="mx-auto mt-[20px] md:mt-[45px] w-[155px] h-[50px] rounded-md bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800  text-white font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Submit
-          <BottomGradient/>
-        </button>
+      <div
+        className="m-auto flex h-[2px] w-[80vw] bg-gradient-to-tr from-blue-300 to-green-700"
+        style={{ borderRadius: "50%" }}
+      ></div>
+
+      {/* ======== */}
+      <div className="relative mt-44 overflow-y-hidden pb-5">
+        <Footers />
+      </div>
+
+        
       </article>
 
 

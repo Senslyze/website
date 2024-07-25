@@ -1,7 +1,10 @@
+"use client";
 import Blob from "@/app/blob/page";
 import "./terms-and-conditions.css"
 import Link from "next/link";
-
+import Footers from "@/components/footer";
+import Form from "@/components/form";
+import { use } from "react";
 
 function TermsAndConditions() {
 
@@ -17,17 +20,17 @@ function TermsAndConditions() {
   return (
     <main className="text-white relative min-h-screen flex pb-6">
 
-      <article className="max-w-2xl mx-auto flex flex-col items-center space-y-8 *:space-y-2">
+      <article className="w-full mx-auto flex flex-col items-center space-y-8 *:space-y-2">
         <h1 className="text-7xl font-extrabold gradient-text-t py-14 whitespace-nowrap">
           T<span className="text-4xl font-bold">ERMS</span> & C<span className="text-4xl font-bold">ONDITIONS</span>
         </h1>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Introduction</h2>
           <h3 className="text-slate-400 text-sm leading-6 tracking-wider">Welcome to Senslyze Inc. ("Senslyze," "we," "our," or "us") website <Link href={"/"} className="text-blue-200"><u>Senslyze.com</u></Link>. By accessing and using this Website, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Use. If you do not agree to these terms, please do not access or use this Website. Your continued use of the Website constitutes your acceptance of these Terms of Use. Senslyze reserves the right to modify, alter, or update these terms at any time without prior notice.</h3>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Right to Use</h2>
           <ol className="space-y-6">
             <li>
@@ -59,7 +62,7 @@ function TermsAndConditions() {
           </ol>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Intellectual Property Rights</h2>
           <ol>
             <li>
@@ -83,7 +86,7 @@ function TermsAndConditions() {
         </section>
 
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Third-Party Content</h2>
           <ol>
             <li>
@@ -106,13 +109,13 @@ function TermsAndConditions() {
           </ol>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>No Warranties</h2>
           <div className="content">ALL INFORMATION AND MATERIAL AVAILABLE ON THIS WEBSITE ARE PROVIDED ON AN "AS IS" BASIS WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES OR REPRESENTATIONS OF ANY KIND. SENSLYZE EXPRESSLY DISCLAIMS, TO THE FULLEST EXTENT PERMITTED BY LAW, ALL EXPRESS, IMPLIED, STATUTORY, OR OTHER WARRANTIES OR REPRESENTATIONS, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE.</div>
           <div className="content">Senslyze does not guarantee or warrant that files available for downloading from this Website will be free of infection or viruses, worms, Trojan horses, or other codes that manifest contaminating or destructive properties. You are responsible for implementing sufficient procedures and checkpoints to satisfy your requirements for data accuracy, input, and output, and for maintaining external means for the reconstruction of any lost data.</div>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Indemnity & Limitation of Liability</h2>
           <ol>
             <li>
@@ -144,22 +147,22 @@ function TermsAndConditions() {
           </ol>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Data Privacy</h2>
           <div className="content">Data privacy is important to Senslyze. Senslyze has a detailed Data Privacy Policy available on the link Privacy Notice. Senslyze’s Data Privacy Policy describes how we collect, use, and disclose information that we may obtain through this Website or as part of our internal processes.</div>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Laws & Jurisdiction</h2>
           <div className="content">These Terms of Use shall be governed by the laws of India, without giving effect to its conflict of law provisions. Any dispute arising out of or in relation to these Terms of Use shall be subject to the exclusive jurisdiction of the courts at Nagpur, Maharashtra, India.</div>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Contact Us</h2>
           <div className="content">If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</div>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Senslyze Inc.</h2>
           <div className="content">
             Address: Plot No.14 ,SBI Colony,
@@ -172,40 +175,39 @@ function TermsAndConditions() {
 
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Jurisdiction</h2>
           <div className="content">This Privacy Policy shall be governed by the laws of India. Any dispute arising from this Privacy Policy shall be subject to the exclusive jurisdiction of the courts at Nagpur, Maharashtra, India.</div>
         </section>
 
-        <section>
+        <section className="max-w-2xl">
           <h2>Copyright © 2024 Senslyze Inc. All rights reserved.</h2>
           <div className="content">This Privacy Policy complies with Indian laws, including the Information Technology Act, 2000, and the rules thereunder.</div>
         </section>
 
 
-        <div className="md:mt-[35px]">
-        <div className="flex items-center gap-4">
-        <input className="custom-checkbox" type="checkbox" />
-
-          <h2 className="text-[#FFF] text-[12px] content">By clicking, you agree to our Terms of Service and that you have read our Privacy Policy.</h2>
+        <div
+        id="ContactsUs"
+        className="flex  min-h-screen w-full flex-col items-center justify-center "
+      >
+        <div className="wrapper">
+          <span className="bg-gradient-to-r text-transparent bg-clip-text from-[#00ffff] to-[#0047ff]">Contact Us</span>
         </div>
-            
-          <br/>
 
-        <div className="flex items-center gap-4">
-        <input className="custom-checkbox" type="checkbox" />
-
-          <h2 className="text-[#FFF] text-[12px] content">I hereby authorise to send notifications on SMS/ Messages/Promotional /informational messages</h2>
+        <div className="container relative md:max-w-[66.66%]">
+          <Form></Form>
         </div>
-     </div>
+      </div>
 
-        <button
-          className="mx-auto mt-[20px] md:mt-[45px] w-[155px] h-[50px] rounded-md bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800  text-white font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Submit
-          <BottomGradient/>
-        </button>
+      <div
+        className="m-auto flex h-[2px] w-[80vw] bg-gradient-to-tr from-blue-300 to-green-700"
+        style={{ borderRadius: "50%" }}
+      ></div>
+
+      {/* ======== */}
+      <div className="relative mt-44 overflow-y-hidden pb-5">
+        <Footers />
+      </div>
 
       </article>
 
