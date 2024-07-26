@@ -11,7 +11,7 @@ const ServiceGrid = () => {
   return (
 
     <div className="grid grid-cols-1 p-4 md:grid-cols-3">
-      <div className="p-4  flex flex-col sm:sm:border-r-2 sm:border-b-2 border-[#004E76]">
+      <div className="p-4  flex flex-col sm:sm:border-r-2 sm:border-b-2 border-[#004E76] border-opacity-75">
       <div className="relative flex items-center justify-center overflow-hidden h-30">
           <Image className='w-[50px] h-[50px]' src={consultancy}   alt=""></Image>
         </div>
@@ -25,7 +25,7 @@ const ServiceGrid = () => {
         </p>
       </div>
 
-      <div className="p-4  flex flex-col sm:sm:border-r-2 sm:border-b-2 border-[#004E76]">
+      <div className="p-4  flex flex-col sm:sm:border-r-2 sm:border-b-2 border-[#004E76] border-opacity-75">
       <div className="relative flex items-center justify-center overflow-hidden h-30">
           <Image className='w-[50px] h-[50px]' src={softwarearc}   alt=""></Image>
         </div>
@@ -39,7 +39,7 @@ const ServiceGrid = () => {
         </p>
       </div>
 
-      <div className="p-4  flex flex-col sm:border-b-2 border-[#004E76]">
+      <div className="p-4  flex flex-col sm:border-b-2 border-[#004E76] border-opacity-75">
       <div className="relative flex items-center justify-center overflow-hidden h-30">
           <Image className='w-[50px] h-[50px] md:mr-2' src={UIUX}   alt=""></Image>
         </div>
@@ -53,7 +53,7 @@ const ServiceGrid = () => {
         </p>
       </div>
 
-      <div className=" p-4  flex flex-col sm:border-r-2  border-[#004E76]">
+      <div className=" p-4  flex flex-col sm:border-r-2  border-[#004E76] border-opacity-75">
       <div className="relative flex items-center justify-center overflow-hidden h-30">
           <Image className='w-[50px] h-[50px]' src={AIML}   alt=""></Image>
         </div>
@@ -67,7 +67,7 @@ const ServiceGrid = () => {
         </p>
       </div>
 
-      <div className=" p-4  flex flex-col sm:border-r-2  border-[#004E76]">
+      <div className=" p-4  flex flex-col sm:border-r-2  border-[#004E76] border-opacity-75">
       <div className="relative flex items-center justify-center overflow-hidden h-30">
           <Image className='w-[50px] h-[50px]' src={AppDevelopment}   alt=""></Image>
         </div>
@@ -80,7 +80,7 @@ const ServiceGrid = () => {
         </p>
       </div>
 
-      <div className="p-4 flex flex-col border-[#004E76]">
+      <div className="p-4 flex flex-col border-[#004E76] border-opacity-75">
       <div className="relative flex items-center justify-center overflow-hidden h-30">
           <Image className='w-[50px] h-[50px]' src={WebDevelopment}   alt=""></Image>
         </div>

@@ -65,10 +65,17 @@ body {
   --radius: 1rem;
 }
 
-/* .logo-container {
-    position: relative;
-    
-  } */
+
+.group:hover > div:first-child {
+  opacity: 0;
+  filter: blur(100px);
+  transition: opacity 1.3s ease-in-out, filter 1.3s ease-in-out;
+}
+
+.group:hover > div:last-child {
+  opacity: 1;
+  transition: opacity 1.3s ease-in-out;
+}
 
 @keyframes background-pan {
   from {
