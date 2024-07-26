@@ -141,8 +141,8 @@ const App: React.FC = () => {
 
         <div className="container md:mt-[4rem]  relative md:max-w-[66.66%]">
           <ProductGrid></ProductGrid>
-        </div>
-      </div> */}
+        </div> */}
+      </div>
 
       <div className="my-20 md:mt-40"></div>
     
