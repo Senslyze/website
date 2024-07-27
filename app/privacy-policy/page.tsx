@@ -14,13 +14,13 @@ function PrivacyPolicyPage() {
       </>
     );
   };
-  
+
   return (
-    <main className="text-white relative min-h-screen flex pb-6">
+    <main className="text-white relative min-h-screen flex pb-6 mx-14">
 
       <article className="w-full mx-auto flex flex-col items-center space-y-8 *:space-y-2">
-        <h1 className="text-7xl font-extrabold gradient-text-t py-14 whitespace-nowrap">
-          P<span className="text-4xl font-bold">RIVACY</span> P<span className="text-4xl font-bold">OLICY</span>
+        <h1 className="text-4xl sm:text-7xl font-extrabold gradient-text-t py-14 whitespace-nowrap">
+          P<span className="text-2xl sm:text-4xl font-bold">RIVACY</span> P<span className="text-2xl sm:text-4xl font-bold">OLICY</span>
         </h1>
 
         <section className="max-w-2xl">
@@ -237,29 +237,29 @@ function PrivacyPolicyPage() {
         </section>
 
         <div
-        id="ContactsUs"
-        className="flex  min-h-screen w-full flex-col items-center justify-center "
-      >
-        <div className="wrapper">
-          <span className="bg-gradient-to-r text-transparent bg-clip-text from-[#00ffff] to-[#0047ff]">Contact Us</span>
+          id="ContactsUs"
+          className="flex  min-h-screen w-full flex-col items-center justify-center "
+        >
+          <div className="wrapper">
+            <span className="bg-gradient-to-r text-transparent bg-clip-text from-[#00ffff] to-[#0047ff]">Contact Us</span>
+          </div>
+
+          <div className="container relative md:max-w-[66.66%]">
+            <Form></Form>
+          </div>
         </div>
 
-        <div className="container relative md:max-w-[66.66%]">
-          <Form></Form>
+        <div
+          className="m-auto flex h-[2px] w-[80vw] bg-gradient-to-tr from-blue-300 to-green-700"
+          style={{ borderRadius: "50%" }}
+        ></div>
+
+        {/* ======== */}
+        <div className="relative mt-44 overflow-y-hidden pb-5">
+          <Footers />
         </div>
-      </div>
 
-      <div
-        className="m-auto flex h-[2px] w-[80vw] bg-gradient-to-tr from-blue-300 to-green-700"
-        style={{ borderRadius: "50%" }}
-      ></div>
 
-      {/* ======== */}
-      <div className="relative mt-44 overflow-y-hidden pb-5">
-        <Footers />
-      </div>
-
-        
       </article>
 
 

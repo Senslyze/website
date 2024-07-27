@@ -1,5 +1,9 @@
 import nodemailer from "nodemailer";
 
+export async function GET() {
+  return new Response("Contacts working!");
+}
+
 export async function POST(req: Request) {
 
   const { firstname, lastname, email, phone, message } = await req.json();
