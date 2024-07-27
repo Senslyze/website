@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.5.1",
     "@radix-ui/react-label": "^2.0.2",
     "@tabler/icons-react": "^3.3.0",
     "@types/nodemailer": "^6.4.14",
