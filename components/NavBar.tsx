@@ -58,15 +58,15 @@ const Navbar: React.FC = () => {
               ></span>
             </li>
 
-            <li className="relative" onClick={() => handleItemClick("Products")}>
-              Products
-              <span
-                className={cn({
-                  "absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px":
-                    activeItem == "Products",
-                })}
-              ></span>
-            </li>
+            {/* <li className="relative" onClick={() => handleItemClick("Products")}> */}
+            {/*   Products */}
+            {/*   <span */}
+            {/*     className={cn({ */}
+            {/*       "absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px": */}
+            {/*         activeItem == "Products", */}
+            {/*     })} */}
+            {/*   ></span> */}
+            {/* </li> */}
 
             <li
               className="relative"
@@ -93,9 +93,8 @@ const Navbar: React.FC = () => {
 
       <div
         id="drawer"
-        className={`fixed z-10 right-0 top-[0] sm:w-[20%] md:w-[40%] xl:w-[20%] h-full  transition-all ease-in-out duration:150 ${
-          nav ? "opacity-100" : "opacity-0 invisible"
-        }`}
+        className={`fixed z-10 right-0 top-[0] sm:w-[20%] md:w-[40%] xl:w-[20%] h-full  transition-all ease-in-out duration:150 ${nav ? "opacity-100" : "opacity-0 invisible"
+          }`}
       >
         <ul className="p-4 text-[#FFF] z-10 cursor-pointer mt-[1rem]">
           <div className="sm:hidden px-1 flex items-center">
@@ -125,14 +124,14 @@ const Navbar: React.FC = () => {
             </li>
           </div>
 
-          <div className=" px-1 flex items-center">
-            <li
-              className={activeItem === "Products" ? "active" : ""}
-              onClick={() => handleItemClick("Products")}
-            >
-              <p className="p-4 border-gray-200">Products</p>
-            </li>
-          </div>
+          {/* <div className=" px-1 flex items-center"> */}
+          {/*   <li */}
+          {/*     className={activeItem === "Products" ? "active" : ""} */}
+          {/*     onClick={() => handleItemClick("Products")} */}
+          {/*   > */}
+          {/*     <p className="p-4 border-gray-200">Products</p> */}
+          {/*   </li> */}
+          {/* </div> */}
 
           <div className=" px-1 flex items-center">
             <li

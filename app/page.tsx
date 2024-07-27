@@ -50,7 +50,7 @@ const App: React.FC = () => {
             id="transform"
           >
             <Button
-              onClick={() => {}}
+              onClick={() => { }}
               duration={2000}
               className="text-nowrap px-5 py-1"
             >
@@ -65,7 +65,7 @@ const App: React.FC = () => {
             id="consult"
           >
             <Button
-              onClick={() => {}}
+              onClick={() => { }}
               duration={3000}
               className="text-nowrap px-5 py-1"
             >
@@ -75,7 +75,7 @@ const App: React.FC = () => {
 
           <span className="absolute w-full md:bottom-[32%] md:left-[2%] lg:left-[10%] lg:top-[65%] xl:left-[10%] xl:top-[74%]">
             <Button
-              onClick={() => {}}
+              onClick={() => { }}
               duration={4000}
               className="text-nowrap px-5 py-1"
             >
@@ -87,7 +87,7 @@ const App: React.FC = () => {
 
           <span className="absolute w-full md:bottom-[25%] md:right-[-48%] lg:right-[-60%] lg:top-[75%] xl:right-[-60%] xl:top-[85%]">
             <Button
-              onClick={() => {}}
+              onClick={() => { }}
               duration={5000}
               className="text-nowrap px-5 py-1"
             >
@@ -129,23 +129,23 @@ const App: React.FC = () => {
         </div>
       </div>
 
+      {/* <div className="my-20 md:mt-40"></div> */}
+      {/*  */}
+      {/* <div */}
+      {/*   id="Products" */}
+      {/*   className="flex  min-h-screen w-full flex-col items-center justify-center" */}
+      {/* > */}
+      {/*   <div className="wrapper"> */}
+      {/*     <span className="bg-gradient-to-r text-transparent bg-clip-text from-[#00ffff] to-[#0047ff]">Products</span> */}
+      {/*   </div> */}
+      {/*  */}
+      {/*   <div className="container md:mt-[4rem]  relative md:max-w-[66.66%]"> */}
+      {/*     <ProductGrid></ProductGrid> */}
+      {/*   </div> */}
+      {/* </div> */}
+
       <div className="my-20 md:mt-40"></div>
 
-      <div
-        id="Products"
-        className="flex  min-h-screen w-full flex-col items-center justify-center"
-      >
-        <div className="wrapper">
-          <span className="bg-gradient-to-r text-transparent bg-clip-text from-[#00ffff] to-[#0047ff]">Products</span>
-        </div>
-
-        <div className="container md:mt-[4rem]  relative md:max-w-[66.66%]">
-          <ProductGrid></ProductGrid>
-        </div>
-      </div>
-
-      <div className="my-20 md:mt-40"></div>
-    
       <div
         id="ContactsUs"
         className="flex  min-h-screen w-full flex-col items-center justify-center "
