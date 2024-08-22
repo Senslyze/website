@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import submitContact from '../../../lib/submitContact.js'
 
 export async function GET() {
   return new Response("Contacts working!");
@@ -275,7 +276,10 @@ export async function POST(req: Request) {
     // Send email to recipient 1
     await transporter.sendMail(recipient1MailOptions);
     // Send email to recipient 2
+    
     await transporter.sendMail(recipient2MailOptions);
+    
+    await submitContact(firstname,lastname,email,phone,message);
 
     console.log("Mail sent successfully.")
     return new Response("Mail sent successfully.", { status: 200 });
