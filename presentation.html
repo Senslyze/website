@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Senslyze Presentation</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logos/Senslyze_logo_without name_white.svg" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    
+    <!-- Framer Motion -->
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@11/dist/framer-motion.js"></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+            colors: {
+              brand: {
+                DEFAULT: '#000000',
+                hover: '#111111',
+                soft: '#f6f6f6'
+              }
+            },
+            boxShadow: {
+              soft: '0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.08)'
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html, body {
+        height: 100%;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+      }
+      
+      .slide {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+        overflow-y: auto;
+      }
+      
+      .slide.active {
+        display: block;
+      }
+      
+      /* Glass utilities */
+      .glass {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.10);
+      }
+      
+      .glass-dark {
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 8px 24px rgba(0,0,0,0.35);
+      }
+      
+      /* Navigation */
+      .nav-controls {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        display: flex;
+        gap: 1rem;
+        z-index: 1000;
+      }
+      
+      .nav-btn {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background: #000000;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+      
+      .nav-btn:hover:not(:disabled) {
+        background: #111111;
+        transform: scale(1.05);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      }
+      
+      .nav-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+      
+      /* Slide counter */
+      .slide-counter {
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #6b7280;
+        z-index: 1000;
+        background: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.08);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
+      
+      /* Transition animation */
+      .slide.active {
+        animation: slideIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Background pattern */
+      .bg-pattern {
+        background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+        background-size: 20px 20px;
+        opacity: 0.3;
+      }
+      
+      /* Card hover effect */
+      .hover-lift {
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      
+      .hover-lift:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased text-neutral-900">
+    <!-- Slide 1: Hero / Title -->
+    <div class="slide active">
+      <!-- Subtle background pattern -->
+      <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-30"></div>
+      
+      <div class="relative mx-auto max-w-7xl px-6 md:px-8 h-full flex flex-col justify-center items-center text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-neutral-200 shadow-sm mb-8">
+          <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <span class="text-xs font-medium text-neutral-700">Business Presentation 2025</span>
+        </div>
+        
+        <!-- Main Logo -->
+        <div class="mb-8">
+          <img src="assets/logos/logo_only_text.svg" alt="Senslyze" class="h-32 md:h-40 w-auto mx-auto" />
+        </div>
+        
+        <!-- Description -->
+        <p class="text-2xl md:text-3xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+          Channelizing Your Ideas to <span class="font-semibold text-neutral-900">Products</span>
+        </p>
+        
+        <!-- Trust Badge -->
+        <div class="mt-16 pt-8 border-t border-neutral-200">
+          <p class="text-sm text-neutral-500 mb-4">Trusted by companies across industries</p>
+          <div class="flex flex-wrap justify-center gap-3 text-xs font-medium text-neutral-600">
+            <span class="px-3 py-1 bg-neutral-100 rounded-full">Automotive</span>
+            <span class="px-3 py-1 bg-neutral-100 rounded-full">Education</span>
+            <span class="px-3 py-1 bg-neutral-100 rounded-full">Healthcare</span>
+            <span class="px-3 py-1 bg-neutral-100 rounded-full">Government</span>
+            <span class="px-3 py-1 bg-neutral-100 rounded-full">Retail</span>
+            <span class="px-3 py-1 bg-neutral-100 rounded-full">Fintech</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 2: Agenda -->
+    <div class="slide">
+      <div class="absolute inset-0 bg-gradient-to-b from-neutral-50 to-white"></div>
+      
+      <div class="relative mx-auto max-w-7xl px-6 md:px-8 h-full py-20">
+        <!-- Logo -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <img src="assets/logos/logo_only_text.svg" alt="Senslyze" class="h-6 w-auto opacity-40" />
+        </div>
+        
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-5xl md:text-6xl font-bold tracking-tight mb-16">Agenda</h2>
+          
+          <!-- Grid: 4 items in 2x2 layout -->
+          <div class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+            <!-- Item 1 -->
+            <div class="group bg-white border border-neutral-200 rounded-2xl p-8 hover:shadow-xl hover:border-neutral-900 transition-all duration-300 hover-lift">
+              <div class="text-6xl font-black text-neutral-900 mb-4">01</div>
+              <h3 class="text-xl font-bold mb-2">About Us</h3>
+              <p class="text-sm text-neutral-600">Who we are and what we do</p>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="group bg-white border border-neutral-200 rounded-2xl p-8 hover:shadow-xl hover:border-neutral-900 transition-all duration-300 hover-lift">
+              <div class="text-6xl font-black text-neutral-900 mb-4">02</div>
+              <h3 class="text-xl font-bold mb-2">Our Core Technical Capabilities</h3>
+              <p class="text-sm text-neutral-600">Services & expertise</p>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="group bg-white border border-neutral-200 rounded-2xl p-8 hover:shadow-xl hover:border-neutral-900 transition-all duration-300 hover-lift">
+              <div class="text-6xl font-black text-neutral-900 mb-4">03</div>
+              <h3 class="text-xl font-bold mb-2">Demos</h3>
+              <p class="text-sm text-neutral-600">Live demonstrations</p>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="group bg-white border border-neutral-200 rounded-2xl p-8 hover:shadow-xl hover:border-neutral-900 transition-all duration-300 hover-lift">
+              <div class="text-6xl font-black text-neutral-900 mb-4">04</div>
+              <h3 class="text-xl font-bold mb-2">Case Studies</h3>
+              <p class="text-sm text-neutral-600">Real-world success stories</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 4: About Us (Detailed) -->
+    <div class="slide">
+      <div class="absolute inset-0 bg-white"></div>
+      
+      <div class="relative mx-auto max-w-7xl px-6 md:px-8 h-full py-20">
+        <!-- Logo -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <img src="assets/logos/logo_only_text.svg" alt="Senslyze" class="h-6 w-auto opacity-40" />
+        </div>
+        
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-5xl md:text-6xl font-bold tracking-tight mb-16 text-neutral-900">About Us</h2>
+          
+          <div class="space-y-8">
+            <div class="border-l-4 border-neutral-900 pl-8">
+              <p class="text-2xl text-neutral-700 leading-relaxed">
+                Senslyze is a IT service provider and a global systems integrator. We offer comprehensive IT management and consultancy services to organizations worldwide. We work in partnership with clients of various sizes while helping them strengthen their IT foundation, manage risk and compliance, and enhance competitive position by applying technology management strategies that really work.
+              </p>
+            </div>
+            
+            <div class="border-l-4 border-neutral-300 pl-8">
+              <p class="text-xl text-neutral-600 leading-relaxed">
+                Among a plethora of services, web design and development, tailor made applications, AI & ML, ERPs, CRMs, e-commerce solutions, business-to-business applications, business-to-client applications, cloud migration and internet portal management are few that we offer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 5: Core Product Verticals -->
+    <div class="slide">
+      <div class="absolute inset-0 bg-white"></div>
+      
+      <div class="relative mx-auto max-w-7xl px-6 md:px-8 h-full py-20">
+        <!-- Logo -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <img src="assets/logos/logo_only_text.svg" alt="Senslyze" class="h-6 w-auto opacity-40" />
+        </div>
+        
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-16 text-neutral-900">Our Core Product Verticals</h2>
+          
+          <!-- Three Column Layout -->
+          <div class="grid grid-cols-3 gap-12">
+            <!-- ERP Column -->
+            <div>
+              <div class="bg-neutral-900 text-white text-center py-4 rounded-lg mb-6">
+                <h3 class="text-2xl font-bold">ERP</h3>
+              </div>
+              
+              <div class="space-y-6">
+                <div>
+                  <p class="text-xs font-bold text-neutral-500 uppercase mb-3 tracking-wider">Solutions</p>
+                  <ul class="space-y-2">
+                    <li class="text-neutral-700">• ERPNext</li>
+                    <li class="text-neutral-700">• OrionERP</li>
+                    <li class="text-neutral-700">• Microsoft Dynamics</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <p class="text-xs font-bold text-neutral-500 uppercase mb-3 tracking-wider">Industries</p>
+                  <ul class="space-y-1.5 text-sm">
+                    <li class="text-neutral-600">Manufacturing</li>
+                    <li class="text-neutral-600">Healthcare</li>
+                    <li class="text-neutral-600">Education</li>
+                    <li class="text-neutral-600">Retail</li>
+                    <li class="text-neutral-600">Logistics</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- CRM Column -->
+            <div>
+              <div class="bg-neutral-900 text-white text-center py-4 rounded-lg mb-6">
+                <h3 class="text-2xl font-bold">CRM</h3>
+              </div>
+              
+              <div class="space-y-6">
+                <div>
+                  <p class="text-xs font-bold text-neutral-500 uppercase mb-3 tracking-wider">Solutions</p>
+                  <ul class="space-y-2">
+                    <li class="text-neutral-700">• Vtiger CRM</li>
+                    <li class="text-neutral-700">• Monday</li>
+                    <li class="text-neutral-700">• META TSP</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <p class="text-xs font-bold text-neutral-500 uppercase mb-3 tracking-wider">Industries</p>
+                  <ul class="space-y-1.5 text-sm">
+                    <li class="text-neutral-600">IT & Technology</li>
+                    <li class="text-neutral-600">BFSI</li>
+                    <li class="text-neutral-600">Real Estate</li>
+                    <li class="text-neutral-600">Pharma</li>
+                    <li class="text-neutral-600">Legal</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- HRMS Column -->
+            <div>
+              <div class="bg-neutral-900 text-white text-center py-4 rounded-lg mb-6">
+                <h3 class="text-2xl font-bold">HRMS</h3>
+              </div>
+              
+              <div class="space-y-6">
+                <div>
+                  <p class="text-xs font-bold text-neutral-500 uppercase mb-3 tracking-wider">Solutions</p>
+                  <ul class="space-y-2">
+                    <li class="text-neutral-700">• ERPNext HRMS</li>
+                    <li class="text-neutral-700">• uKnowva HRMS</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <p class="text-xs font-bold text-neutral-500 uppercase mb-3 tracking-wider">Industries</p>
+                  <ul class="space-y-1.5 text-sm">
+                    <li class="text-neutral-600">IT & Technology</li>
+                    <li class="text-neutral-600">Manufacturing</li>
+                    <li class="text-neutral-600">BFSI</li>
+                    <li class="text-neutral-600">Real Estate</li>
+                    <li class="text-neutral-600">Pharma</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 6: Core Technical Capabilities -->
+    <div class="slide">
+      <div class="absolute inset-0 bg-white"></div>
+      
+      <div class="relative mx-auto max-w-7xl px-6 md:px-8 h-full py-20">
+        <!-- Logo -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <img src="assets/logos/logo_only_text.svg" alt="Senslyze" class="h-6 w-auto opacity-40" />
+        </div>
+        
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-16 text-neutral-900">Our Core Technical Capabilities</h2>
+          
+          <!-- Three Column Layout -->
+          <div class="grid grid-cols-3 gap-10">
+            <!-- AI & Generative AI Column -->
+            <div>
+              <div class="bg-neutral-900 text-white text-center py-5 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold">AI & Generative AI</h3>
+              </div>
+              
+              <div class="space-y-8">
+                <div>
+                  <p class="text-sm font-bold text-neutral-900 uppercase mb-4 tracking-wider">CORE TECHNOLOGIES</p>
+                  <ul class="space-y-3 text-base">
+                    <li class="text-neutral-800 font-medium">• Large Language Models</li>
+                    <li class="text-neutral-800 font-medium">• Computer Vision</li>
+                    <li class="text-neutral-800 font-medium">• NLP</li>
+                    <li class="text-neutral-800 font-medium">• Machine Learning</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <p class="text-sm font-bold text-neutral-900 uppercase mb-4 tracking-wider">TOOLS & FRAMEWORKS</p>
+                  <ul class="space-y-2.5 text-base">
+                    <li class="text-neutral-700">TensorFlow/PyTorch</li>
+                    <li class="text-neutral-700">OpenAI/Azure AI</li>
+                    <li class="text-neutral-700">Langchain/LangGraph</li>
+                    <li class="text-neutral-700">NLTK/spaCy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Frontend Column -->
+            <div>
+              <div class="bg-neutral-900 text-white text-center py-5 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold">Frontend</h3>
+              </div>
+              
+              <div class="space-y-8">
+                <div>
+                  <p class="text-sm font-bold text-neutral-900 uppercase mb-4 tracking-wider">CORE TECHNOLOGIES</p>
+                  <ul class="space-y-3 text-base">
+                    <li class="text-neutral-800 font-medium">• React/Angular/Vue</li>
+                    <li class="text-neutral-800 font-medium">• HTML5/CSS3/SASS</li>
+                    <li class="text-neutral-800 font-medium">• JavaScript/TypeScript</li>
+                    <li class="text-neutral-800 font-medium">• Responsive Design</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <p class="text-sm font-bold text-neutral-900 uppercase mb-4 tracking-wider">TOOLS & FRAMEWORKS</p>
+                  <ul class="space-y-2.5 text-base">
+                    <li class="text-neutral-700">Next.js/Gatsby</li>
+                    <li class="text-neutral-700">Redux/MobX</li>
+                    <li class="text-neutral-700">Tailwind CSS</li>
+                    <li class="text-neutral-700">Material UI</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Backend Column -->
+            <div>
+              <div class="bg-neutral-900 text-white text-center py-5 rounded-lg mb-8">
+                <h3 class="text-2xl font-bold">Backend</h3>
+              </div>
+              
+              <div class="space-y-8">
+                <div>
+                  <p class="text-sm font-bold text-neutral-900 uppercase mb-4 tracking-wider">CORE TECHNOLOGIES</p>
+                  <ul class="space-y-3 text-base">
+                    <li class="text-neutral-800 font-medium">• Node.js & Express.js</li>
+                    <li class="text-neutral-800 font-medium">• Python (Django/Flask)</li>
+                    <li class="text-neutral-800 font-medium">• Java/Spring Boot</li>
+                    <li class="text-neutral-800 font-medium">• .NET Core</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <p class="text-sm font-bold text-neutral-900 uppercase mb-4 tracking-wider">TOOLS & FRAMEWORKS</p>
+                  <ul class="space-y-2.5 text-base">
+                    <li class="text-neutral-700">Docker/Kubernetes</li>
+                    <li class="text-neutral-700">Kafka/RabbitMQ</li>
+                    <li class="text-neutral-700">Redis/Elasticsearch</li>
+                    <li class="text-neutral-700">MongoDB/PostgreSQL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 7: Senslyze AI Platform -->
+    <div class="slide">
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-blue-50"></div>
+      
+      <div class="relative mx-auto max-w-7xl px-6 md:px-8 h-full py-20">
+        <!-- Logo -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <img src="assets/logos/logo_only_text.svg" alt="Senslyze" class="h-6 w-auto opacity-40" />
+        </div>
+        
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-5xl md:text-6xl font-bold tracking-tight mb-12" style="color: #57180D;">Senslyze AI</h2>
+          
+          <div class="grid gap-8 lg:grid-cols-2 items-start">
+            <!-- Left Column - Description & Features -->
+            <div>
+              <div class="bg-white/60 backdrop-blur border border-neutral-200 rounded-3xl p-8 shadow-soft mb-6">
+                <p class="text-lg text-neutral-700 leading-relaxed">
+                  Senslyze AI is a comprehensive platform for building, deploying, and managing AI agents and workflows. Our solution empowers organizations to create intelligent autonomous systems that understand, reason, and act on complex data, solving real business problems with minimal human intervention.
+                </p>
+              </div>
+              
+              <div class="bg-white/60 backdrop-blur border border-neutral-200 rounded-3xl p-8 shadow-soft">
+                <h3 class="text-2xl font-bold mb-6" style="color: #57180D;">Key Features</h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <span class="font-bold text-neutral-900">AI Agent Builder:</span>
+                      <span class="text-neutral-700"> Create custom agents with specific skills and capabilities</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <span class="font-bold text-neutral-900">Workflow Orchestration:</span>
+                      <span class="text-neutral-700"> Design multi-agent workflows that coordinate to solve complex tasks</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <span class="font-bold text-neutral-900">Integration Hub:</span>
+                      <span class="text-neutral-700"> Connect with enterprise systems, APIs, and data sources</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <span class="font-bold text-neutral-900">Performance Analytics:</span>
+                      <span class="text-neutral-700"> Monitor and optimize agent performance with comprehensive metrics</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Right Column - Tech Stack Table -->
+            <div class="bg-white border-2 border-neutral-200 rounded-3xl p-8 shadow-soft">
+              <table class="w-full">
+                <tbody class="divide-y divide-neutral-200">
+                  <tr>
+                    <td class="py-4 font-bold text-neutral-900">Component</td>
+                    <td class="py-4 font-bold text-neutral-900">Technology</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 text-neutral-700">Frontend</td>
+                    <td class="py-3 text-neutral-900 font-medium">React, Next.js, TypeScript</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 text-neutral-700">Backend</td>
+                    <td class="py-3 text-neutral-900 font-medium">Node.js, Python, FastAPI</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 text-neutral-700">Database</td>
+                    <td class="py-3 text-neutral-900 font-medium">MongoDB, Vector Databases</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 text-neutral-700">AI/ML</td>
+                    <td class="py-3 text-neutral-900 font-medium">OpenAI, Claude, LangChain</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 text-neutral-700">Deployment</td>
+                    <td class="py-3 text-neutral-900 font-medium">AWS</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 8: Demos with Video Placeholders -->
+    <div class="slide">
+      <div class="absolute inset-0 bg-gradient-to-b from-neutral-50 to-white"></div>
+      
+      <div class="relative mx-auto max-w-7xl px-6 md:px-8 h-full py-20">
+        <!-- Logo -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <img src="assets/logos/logo_only_text.svg" alt="Senslyze" class="h-6 w-auto opacity-40" />
+        </div>
+        
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-5xl md:text-6xl font-bold tracking-tight mb-12">Live Demonstrations</h2>
+          
+          <div class="grid gap-8 md:grid-cols-2">
+            <!-- Demo Video 1 -->
+            <div class="bg-white border-2 border-neutral-200 rounded-3xl overflow-hidden shadow-soft hover-lift">
+              <div class="aspect-video bg-neutral-900 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="w-24 h-24 mx-auto mb-4 bg-white/20 backdrop-blur rounded-full flex items-center justify-center">
+                    <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <p class="text-xl font-semibold">AI Agent Demo</p>
+                  <p class="text-sm text-neutral-300 mt-2">[Video Placeholder]</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">AI Agent in Action</h3>
+                <p class="text-neutral-600">Watch how our AI agents handle complex business workflows autonomously</p>
+              </div>
+            </div>
+            
+            <!-- Demo Video 2 -->
+            <div class="bg-white border-2 border-neutral-200 rounded-3xl overflow-hidden shadow-soft hover-lift">
+              <div class="aspect-video bg-neutral-900 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="w-24 h-24 mx-auto mb-4 bg-white/20 backdrop-blur rounded-full flex items-center justify-center">
+                    <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <p class="text-xl font-semibold">WhatsApp Bot Demo</p>
+                  <p class="text-sm text-neutral-300 mt-2">[Video Placeholder]</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">WhatsApp Automation</h3>
+                <p class="text-neutral-600">See how our WhatsApp bots enhance customer engagement and support</p>
+              </div>
+            </div>
+            
+            <!-- Demo Video 3 -->
+            <div class="bg-white border-2 border-neutral-200 rounded-3xl overflow-hidden shadow-soft hover-lift">
+              <div class="aspect-video bg-neutral-900 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="w-24 h-24 mx-auto mb-4 bg-white/20 backdrop-blur rounded-full flex items-center justify-center">
+                    <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <p class="text-xl font-semibold">Platform Demo</p>
+                  <p class="text-sm text-neutral-300 mt-2">[Video Placeholder]</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Custom Platform</h3>
+                <p class="text-neutral-600">Explore our custom-built platforms and enterprise solutions</p>
+              </div>
+            </div>
+            
+            <!-- Demo Video 4 -->
+            <div class="bg-white border-2 border-neutral-200 rounded-3xl overflow-hidden shadow-soft hover-lift">
+              <div class="aspect-video bg-neutral-900 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div class="w-24 h-24 mx-auto mb-4 bg-white/20 backdrop-blur rounded-full flex items-center justify-center">
+                    <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <p class="text-xl font-semibold">RAG System Demo</p>
+                  <p class="text-sm text-neutral-300 mt-2">[Video Placeholder]</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Document Intelligence</h3>
+                <p class="text-neutral-600">Experience the power of RAG for intelligent document search</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 9: Thank You -->
+    <div class="slide">
+      <div class="absolute inset-0 bg-gradient-to-br from-neutral-900 via-neutral-950 to-black"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.05)_0%,_transparent_50%)]"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-neutral-800/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-neutral-800/20 rounded-full blur-3xl"></div>
+      
+      <div class="relative mx-auto max-w-5xl px-6 md:px-8 h-full flex flex-col justify-center items-center text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur text-white text-sm font-medium mb-8">
+          <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+          <span>Ready to Transform Your Business?</span>
+        </div>
+        
+        <h2 class="text-5xl md:text-7xl font-black tracking-tight text-white mb-6">Let's build something brilliant together.</h2>
+        <p class="text-xl md:text-2xl text-neutral-300 max-w-3xl mx-auto mb-12">
+          Get your own platform, AI agent, or WhatsApp bot — <span class="text-white font-semibold">in under 30 days.</span>
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+          <a href="https://wa.me/919325716883" target="_blank" class="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-neutral-900 rounded-xl font-semibold text-lg shadow-2xl hover:bg-neutral-100 hover:scale-105 transition-all duration-200">
+            <iconify-icon icon="hugeicons:whatsapp" width="24" height="24"></iconify-icon>
+            Chat on WhatsApp
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="mailto:senslyzeforbusiness@gmail.com" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur border-2 border-white/20 text-white rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-200">
+            <iconify-icon icon="hugeicons:mail-01" width="24" height="24"></iconify-icon>
+            Email Us
+          </a>
+        </div>
+        
+        <div class="flex items-center justify-center gap-8 text-sm text-neutral-400">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Free Consultation</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>24hr Response</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation Controls -->
+    <div class="slide-counter">
+      <span id="current-slide">1</span> / <span id="total-slides">8</span>
+    </div>
+    
+    <div class="nav-controls">
+      <button class="nav-btn" id="prev-btn" onclick="previousSlide()">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button class="nav-btn" id="next-btn" onclick="nextSlide()">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+    
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      
+      document.getElementById('total-slides').textContent = totalSlides;
+      
+      function showSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (n + totalSlides) % totalSlides;
+        slides[currentSlide].classList.add('active');
+        
+        document.getElementById('current-slide').textContent = currentSlide + 1;
+        
+        // Update button states
+        document.getElementById('prev-btn').disabled = currentSlide === 0;
+        document.getElementById('next-btn').disabled = currentSlide === totalSlides - 1;
+      }
+      
+      function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+          showSlide(currentSlide + 1);
+        }
+      }
+      
+      function previousSlide() {
+        if (currentSlide > 0) {
+          showSlide(currentSlide - 1);
+        }
+      }
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+          e.preventDefault();
+          nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          previousSlide();
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          showSlide(0);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          showSlide(totalSlides - 1);
+        }
+      });
+      
+      // Touch/swipe support for mobile
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      document.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+      
+      document.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      });
+      
+      function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+          nextSlide();
+        }
+        if (touchEndX > touchStartX + 50) {
+          previousSlide();
+        }
+      }
+      
+      // Initialize
+      showSlide(0);
+    </script>
+    
+    <!-- Framer Motion Animations -->
+    <script type="module">
+      const { motion, animate, inView } = window.Motion;
+      
+      // Animate current slide content when it becomes active
+      function animateSlideContent(slideIndex) {
+        const slide = document.querySelectorAll('.slide')[slideIndex];
+        
+        // Animate headings
+        const headings = slide.querySelectorAll('h1, h2, h3');
+        headings.forEach((heading, index) => {
+          animate(heading,
+            { opacity: [0, 1], y: [30, 0] },
+            { duration: 0.8, delay: index * 0.1, easing: [0.22, 1, 0.36, 1] }
+          );
+        });
+        
+        // Animate paragraphs
+        const paragraphs = slide.querySelectorAll('p');
+        paragraphs.forEach((p, index) => {
+          animate(p,
+            { opacity: [0, 1], y: [20, 0] },
+            { duration: 0.6, delay: 0.2 + (index * 0.1), easing: [0.22, 1, 0.36, 1] }
+          );
+        });
+        
+        // Animate cards with stagger
+        const cards = slide.querySelectorAll('.hover-lift, article, .group');
+        cards.forEach((card, index) => {
+          animate(card,
+            { opacity: [0, 1], y: [40, 0] },
+            { duration: 0.6, delay: 0.3 + (index * 0.1), easing: [0.22, 1, 0.36, 1] }
+          );
+        });
+        
+        // Animate badges
+        const badges = slide.querySelectorAll('.inline-flex');
+        badges.forEach((badge, index) => {
+          animate(badge,
+            { opacity: [0, 1], scale: [0.9, 1] },
+            { duration: 0.5, delay: index * 0.1, easing: [0.22, 1, 0.36, 1] }
+          );
+        });
+      }
+      
+      // Initial animation
+      setTimeout(() => {
+        animateSlideContent(0);
+      }, 100);
+      
+      // Re-animate on slide change
+      const originalShowSlide = window.showSlide;
+      window.showSlide = function(n) {
+        originalShowSlide(n);
+        setTimeout(() => {
+          animateSlideContent(window.currentSlide);
+        }, 50);
+      };
+    </script>
+  </body>
+</html>
+

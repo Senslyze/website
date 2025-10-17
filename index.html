@@ -1,0 +1,1220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Senslyze — Build Smart. Automate Fast. Sell Everywhere.</title>
+    <meta name="description" content="Senslyze builds AI agents, custom platforms, and WhatsApp automation. From chat apps to crypto wallets and DMS systems—launch in weeks, not months." />
+    <meta property="og:title" content="Senslyze — Build Smart. Automate Fast. Sell Everywhere." />
+    <meta property="og:description" content="Your end-to-end partner for platforms, AI agents, and growth across WhatsApp, web, and mobile." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://senslyze.com/og-image.png" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/svg+xml" href="assets/logos/Senslyze_logo_without name_white.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CDN (for quick statics) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+            colors: {
+              brand: {
+                DEFAULT: '#000000',
+                hover: '#111111',
+                soft: '#f6f6f6'
+              }
+            },
+            boxShadow: {
+              soft: '0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.08)'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Smooth scroll for the entire page */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Minimal surfaces */
+      .ring-grid { background-image: none; }
+      .hero-gradient { background: transparent; }
+      /* Glass utilities */
+      .glass {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.10);
+      }
+      .glass-dark {
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 8px 24px rgba(0,0,0,0.35);
+      }
+      /* Mobile menu */
+      .mobile-menu { display: none; }
+      .mobile-menu.active { display: block; }
+      
+      /* Page fade-in animation */
+      body {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased text-neutral-900 selection:bg-brand/20">
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-neutral-200/60 shadow-sm">
+      <div class="mx-auto max-w-[88rem] px-6 md:px-8">
+        <div class="flex h-20 items-center justify-between">
+          <!-- Logo -->
+          <a href="#" class="group" aria-label="Senslyze Home">
+            <img src="assets/logos/logo_only_text.svg" alt="Senslyze" class="h-8 w-auto group-hover:scale-105 transition-transform" />
+          </a>
+          
+          <!-- Desktop Navigation with hover effects -->
+          <nav class="hidden md:flex items-center gap-1">
+            <a href="#features" class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group">
+              Features
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-neutral-900 group-hover:w-3/4 transition-all duration-300"></span>
+            </a>
+            <a href="#services" class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group">
+              Services
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-neutral-900 group-hover:w-3/4 transition-all duration-300"></span>
+            </a>
+            <a href="#about" class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group">
+              About
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-neutral-900 group-hover:w-3/4 transition-all duration-300"></span>
+            </a>
+            <a href="#industries" class="relative px-4 py-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors group">
+              Industries
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-neutral-900 group-hover:w-3/4 transition-all duration-300"></span>
+            </a>
+          </nav>
+          
+          <!-- Right side with enhanced CTA -->
+          <div class="flex items-center gap-4">
+            <!-- Enhanced CTA Button -->
+            <a href="contact.html" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-neutral-900 to-neutral-700 rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 group">
+              <iconify-icon icon="hugeicons:calendar-03" width="16" height="16"></iconify-icon>
+              Book a Call
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+            
+            <!-- Mobile menu button with animation -->
+            <button id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center rounded-xl p-2.5 text-neutral-900 hover:bg-neutral-100 transition-all" aria-label="Toggle menu">
+              <svg class="h-6 w-6 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+              </div>
+        
+        <!-- Enhanced Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden mt-2 pb-4">
+          <div class="bg-neutral-50 rounded-2xl p-4 border border-neutral-200">
+            <div class="flex flex-col space-y-1">
+              <a href="#features" class="flex items-center gap-3 text-sm font-medium text-neutral-700 hover:text-neutral-900 hover:bg-white px-4 py-3 rounded-xl transition-all">
+                <iconify-icon icon="hugeicons:star" width="18" height="18"></iconify-icon>
+                Features
+              </a>
+              <a href="#services" class="flex items-center gap-3 text-sm font-medium text-neutral-700 hover:text-neutral-900 hover:bg-white px-4 py-3 rounded-xl transition-all">
+                <iconify-icon icon="hugeicons:settings-02" width="18" height="18"></iconify-icon>
+                Services
+              </a>
+              <a href="#about" class="flex items-center gap-3 text-sm font-medium text-neutral-700 hover:text-neutral-900 hover:bg-white px-4 py-3 rounded-xl transition-all">
+                <iconify-icon icon="hugeicons:information-circle" width="18" height="18"></iconify-icon>
+                About
+              </a>
+              <a href="#industries" class="flex items-center gap-3 text-sm font-medium text-neutral-700 hover:text-neutral-900 hover:bg-white px-4 py-3 rounded-xl transition-all">
+                <iconify-icon icon="hugeicons:building-03" width="18" height="18"></iconify-icon>
+                Industries
+              </a>
+              <div class="h-px bg-neutral-200 my-2"></div>
+              <a href="contact.html" class="flex items-center justify-center gap-2 text-sm font-semibold text-white bg-gradient-to-r from-neutral-900 to-neutral-700 px-4 py-3 rounded-xl hover:shadow-lg transition-all">
+                <iconify-icon icon="hugeicons:calendar-03" width="18" height="18"></iconify-icon>
+                Book a Call
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-neutral-50 to-white pt-32 pb-20 md:pt-40 md:pb-32">
+      <!-- Subtle background pattern -->
+      <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-30"></div>
+      
+      <div class="relative mx-auto max-w-7xl px-6 md:px-8">
+        <div class="text-center max-w-4xl mx-auto">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-neutral-200 shadow-sm">
+            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span class="text-xs font-medium text-neutral-700">Consulting • Engineering • AI</span>
+          </div>
+          
+          <!-- Main Heading -->
+          <h1 class="mt-8 text-5xl md:text-7xl font-black tracking-tight leading-[1.1] bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-600 bg-clip-text text-transparent">
+            We Design, Build, and Scale Your Software
+          </h1>
+          
+          <!-- Description -->
+          <p class="mt-6 text-xl md:text-2xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+            An IT services company specializing in product engineering, automation, and messaging. <span class="font-semibold text-neutral-900">Channelizing Your Ideas to Products.</span>
+          </p>
+          
+          <!-- CTA Buttons -->
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a id="book" href="contact.html" class="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-neutral-900 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200">
+              Book a Call
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#services" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-neutral-700 bg-white border-2 border-neutral-200 rounded-xl hover:border-neutral-900 hover:text-neutral-900 transition-all duration-200">
+              Explore Services
+            </a>
+          </div>
+          
+          <!-- Trust Badge -->
+          <div class="mt-12 pt-8 border-t border-neutral-200">
+            <p class="text-sm text-neutral-500 mb-4">Trusted by companies across industries</p>
+            <div class="flex flex-wrap justify-center gap-4 text-xs font-medium text-neutral-600">
+              <span class="px-3 py-1 bg-neutral-100 rounded-full">Automotive</span>
+              <span class="px-3 py-1 bg-neutral-100 rounded-full">Education</span>
+              <span class="px-3 py-1 bg-neutral-100 rounded-full">Healthcare</span>
+              <span class="px-3 py-1 bg-neutral-100 rounded-full">Government</span>
+              <span class="px-3 py-1 bg-neutral-100 rounded-full">Retail</span>
+              <span class="px-3 py-1 bg-neutral-100 rounded-full">Beauty</span>
+              <span class="px-3 py-1 bg-neutral-100 rounded-full">QSR</span>
+              <span class="px-3 py-1 bg-neutral-100 rounded-full">Fintech</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES (Four) -->
+    <section id="features" class="py-20 md:py-28 bg-white">
+      <div class="mx-auto max-w-[90rem] px-6 md:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Why teams choose Senslyze</h2>
+          <p class="mt-4 text-lg text-neutral-600">Faster delivery, enterprise security, and deployments that fit your environment.</p>
+        </div>
+        <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+          <div class="group relative bg-gradient-to-br from-neutral-50 to-white border border-neutral-200 rounded-2xl p-9 min-h-[320px] md:min-h-[360px] hover:shadow-xl hover:border-neutral-300 transition-all duration-300">
+            <div class="text-neutral-900 mb-6">
+              <iconify-icon icon="hugeicons:zap" width="40" height="40"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Launch in Weeks, Not Months</h3>
+            <p class="text-neutral-600 text-sm leading-relaxed">Prebuilt templates, accelerators, and 80/20 defaults speed delivery. Go from idea to production in weeks without compromising quality or reliability.</p>
+          </div>
+          <div class="group relative bg-gradient-to-br from-neutral-50 to-white border border-neutral-200 rounded-2xl p-9 min-h-[320px] md:min-h-[360px] hover:shadow-xl hover:border-neutral-300 transition-all duration-300">
+            <div class="text-neutral-900 mb-6">
+              <iconify-icon icon="hugeicons:message-01" width="40" height="40"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold mb-3">WhatsApp‑Native Customer Journeys</h3>
+            <p class="text-neutral-600 text-sm leading-relaxed">Click‑to‑WhatsApp funnels, contact‑aware flows, and inbox integrations out‑of‑the‑box. Convert, support, and re‑engage customers at scale, automatically.</p>
+          </div>
+          <div class="group relative bg-gradient-to-br from-neutral-50 to-white border border-neutral-200 rounded-2xl p-9 min-h-[320px] md:min-h-[360px] hover:shadow-xl hover:border-neutral-300 transition-all duration-300">
+            <div class="text-neutral-900 mb-6">
+              <iconify-icon icon="hugeicons:knight-shield" width="40" height="40"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Secure by Design</h3>
+            <p class="text-neutral-600 text-sm leading-relaxed">RBAC, SSO, audit trails, and real‑time observability come standard. Ship confidently with controls and evidence InfoSec expects from day one.</p>
+          </div>
+          <div class="group relative bg-gradient-to-br from-neutral-50 to-white border border-neutral-200 rounded-2xl p-9 min-h-[320px] md:min-h-[360px] hover:shadow-xl hover:border-neutral-300 transition-all duration-300">
+            <div class="text-neutral-900 mb-6">
+              <iconify-icon icon="hugeicons:delivery-delay-01" width="40" height="40"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Deploy Your Way</h3>
+            <p class="text-neutral-600 text-sm leading-relaxed">Deploy on AWS, GCP, Azure, hybrid VPC, or fully on‑prem. Keep control of data residency, cost, and compliance while avoiding lock‑in and surprises.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 md:py-32 bg-white">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-3">IT Services for Real Business Outcomes</h2>
+          <p class="text-lg text-neutral-600">Consulting-led delivery across platforms, AI, and messaging.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:puzzle" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <h3 class="text-lg font-bold text-neutral-900 pr-12">Product & Platform Engineering</h3>
+            </div>
+            <p class="text-sm text-neutral-600 mb-6 leading-relaxed">Design, build, and scale web/mobile platforms, dashboards, and integrations with cloud-native best practices.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Custom web & mobile apps
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                API & system integrations
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Cloud-native architecture
+              </li>
+            </ul>
+            <a href="contact.html" class="inline-flex items-center text-sm font-medium text-neutral-900 hover:gap-2 transition-all">
+              Learn more
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:robot-01" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <h3 class="text-lg font-bold text-neutral-900 pr-12">AI, Automation & Data</h3>
+            </div>
+            <p class="text-sm text-neutral-600 mb-6 leading-relaxed">RAG, OCR, agents, and analytics. We embed intelligence into your existing tools and workflows.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                RAG & vector search
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                AI agents & automation
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                OCR & data extraction
+              </li>
+            </ul>
+            <a href="contact.html" class="inline-flex items-center text-sm font-medium text-neutral-900 hover:gap-2 transition-all">
+              Learn more
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:chart-up" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <h3 class="text-lg font-bold text-neutral-900 pr-12">CX, Messaging & Growth</h3>
+            </div>
+            <p class="text-sm text-neutral-600 mb-6 leading-relaxed">WhatsApp experiences, funnels, CTWA, and support flows that convert and retain customers.</p>
+            <ul class="space-y-2 mb-6">
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                WhatsApp CTWA & flows
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Customer support bots
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Conversion funnels
+              </li>
+            </ul>
+            <a href="contact.html" class="inline-flex items-center text-sm font-medium text-neutral-900 hover:gap-2 transition-all">
+              Learn more
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 md:py-32 bg-white">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        <div class="grid gap-16 lg:grid-cols-2 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-100 text-neutral-700 text-sm font-medium mb-6">
+              <iconify-icon icon="hugeicons:rocket-01" width="16" height="16"></iconify-icon>
+              <span>About Us</span>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight">About Senslyze</h2>
+            <p class="mt-6 text-lg text-neutral-600 leading-relaxed">We are an IT services company focused on consulting-first delivery. Our teams design, build, and scale software products—platforms, APIs, data/AI workflows, and customer messaging—so you can move from idea to impact faster.</p>
+            <div class="mt-8 space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-neutral-900 flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-neutral-700">Product & platform engineering across web and mobile</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-neutral-900 flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-neutral-700">Applied AI: agents, RAG, OCR, analytics & automation</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-neutral-900 flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-neutral-700">Messaging CX: WhatsApp journeys, CTWA, and support flows</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-3xl p-8 text-white">
+              <div class="text-4xl font-bold">15+</div>
+              <div class="mt-2 text-neutral-300">Products Shipped</div>
+            </div>
+            <div class="bg-gradient-to-br from-neutral-100 to-neutral-50 border-2 border-neutral-200 rounded-3xl p-8">
+              <div class="text-4xl font-bold text-neutral-900">10+</div>
+              <div class="mt-2 text-neutral-600">Industries Served</div>
+            </div>
+            <div class="bg-gradient-to-br from-neutral-100 to-neutral-50 border-2 border-neutral-200 rounded-3xl p-8">
+              <div class="text-4xl font-bold text-neutral-900">100%</div>
+              <div class="mt-2 text-neutral-600">Client Satisfaction</div>
+            </div>
+            <div class="bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-3xl p-8 text-white">
+              <div class="text-4xl font-bold">4 Weeks</div>
+              <div class="mt-2 text-neutral-300">Avg. MVP Launch</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section id="industries" class="py-20 md:py-32 bg-gradient-to-b from-neutral-50 to-white">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Industries We Serve</h2>
+          <p class="mt-4 text-lg text-neutral-600">Selected wins across sectors. Client names withheld for confidentiality.</p>
+        </div>
+        <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="group bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="w-14 h-14 rounded-xl bg-red-100 flex items-center justify-center mb-4 text-red-600">
+              <iconify-icon icon="hugeicons:car-02" width="32" height="32"></iconify-icon>
+            </div>
+            <div class="text-lg font-bold mb-2">Automotive</div>
+            <p class="text-sm text-neutral-600">CTWA, test drive, dealership routing</p>
+          </div>
+          <div class="group bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-4 text-blue-600">
+              <iconify-icon icon="hugeicons:school" width="32" height="32"></iconify-icon>
+            </div>
+            <div class="text-lg font-bold mb-2">Education</div>
+            <p class="text-sm text-neutral-600">On-prem chatbot for admissions</p>
+          </div>
+          <div class="group bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="w-14 h-14 rounded-xl bg-green-100 flex items-center justify-center mb-4 text-green-600">
+              <iconify-icon icon="hugeicons:hospital-01" width="32" height="32"></iconify-icon>
+            </div>
+            <div class="text-lg font-bold mb-2">Healthcare</div>
+            <p class="text-sm text-neutral-600">Hospital intake, ID OCR</p>
+          </div>
+          <div class="group bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="w-14 h-14 rounded-xl bg-purple-100 flex items-center justify-center mb-4 text-purple-600">
+              <iconify-icon icon="hugeicons:central-shaheed-minar" width="32" height="32"></iconify-icon>
+            </div>
+            <div class="text-lg font-bold mb-2">Government</div>
+            <p class="text-sm text-neutral-600">PGRS ticketing, certificate downloads</p>
+          </div>
+          <div class="group bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="w-14 h-14 rounded-xl bg-pink-100 flex items-center justify-center mb-4 text-pink-600">
+              <iconify-icon icon="hugeicons:shopping-bag-01" width="32" height="32"></iconify-icon>
+            </div>
+            <div class="text-lg font-bold mb-2">Retail / E‑Com</div>
+            <p class="text-sm text-neutral-600">WhatsApp ShopMate, order flows</p>
+          </div>
+          <div class="group bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="w-14 h-14 rounded-xl bg-rose-100 flex items-center justify-center mb-4 text-rose-600">
+              <iconify-icon icon="hugeicons:magic-wand-05" width="32" height="32"></iconify-icon>
+            </div>
+            <div class="text-lg font-bold mb-2">Beauty</div>
+            <p class="text-sm text-neutral-600">Ingredient scanner, PDP journeys</p>
+          </div>
+          <div class="group bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="w-14 h-14 rounded-xl bg-orange-100 flex items-center justify-center mb-4 text-orange-600">
+              <iconify-icon icon="hugeicons:restaurant-01" width="32" height="32"></iconify-icon>
+            </div>
+            <div class="text-lg font-bold mb-2">Restaurants / QSR</div>
+            <p class="text-sm text-neutral-600">QR code + Menu PDF + Petpooja</p>
+          </div>
+          <div class="group bg-white border border-neutral-200 rounded-2xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="w-14 h-14 rounded-xl bg-yellow-100 flex items-center justify-center mb-4 text-yellow-700">
+              <iconify-icon icon="hugeicons:bitcoin" width="32" height="32"></iconify-icon>
+            </div>
+            <div class="text-lg font-bold mb-2">Fintech & Crypto</div>
+            <p class="text-sm text-neutral-600">KYC, onboarding, support bots</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="case-studies" class="py-20 md:py-32 bg-neutral-50">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        <div class="flex items-end justify-between gap-6 flex-wrap mb-12">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-900 text-white text-xs font-medium mb-4">
+              <iconify-icon icon="hugeicons:chart-01" width="14" height="14"></iconify-icon>
+              <span>Success Stories</span>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-3">Featured Case Studies</h2>
+            <p class="text-lg text-neutral-600">Results that speak for themselves.</p>
+          </div>
+          <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white rounded-xl font-medium hover:bg-neutral-800 transition-colors">
+            Request case studies
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:legal-01" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <span class="inline-block px-2.5 py-1 bg-neutral-900 text-white text-xs font-medium rounded-full">Legal</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2 pr-12">Contract Search Assistant (RAG)</h3>
+            <p class="text-sm text-neutral-600 mb-6">Instantly query 200‑page contracts in plain English. Find clauses, risks,
+              and answers in seconds.</p>
+            <div class="flex items-baseline gap-2">
+              <div class="text-3xl font-bold text-neutral-900">92%</div>
+              <div class="text-sm text-neutral-600">Reduced lookup time</div>
+            </div>
+          </article>
+          <article class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:energy" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <span class="inline-block px-2.5 py-1 bg-neutral-900 text-white text-xs font-medium rounded-full">Energy</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2 pr-12">Predictive Refill System</h3>
+            <p class="text-sm text-neutral-600 mb-6">Predict refills from live usage and seasonality. Auto‑reorder prevents stockouts—30% fewer emergency runs.</p>
+            <div class="flex items-baseline gap-2">
+              <div class="text-3xl font-bold text-neutral-900">30%</div>
+              <div class="text-sm text-neutral-600">Fewer emergency orders</div>
+            </div>
+          </article>
+          <article class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:package-01" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <span class="inline-block px-2.5 py-1 bg-neutral-900 text-white text-xs font-medium rounded-full">FMCG</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2 pr-12">Inventory & Invoicing DMS</h3>
+            <p class="text-sm text-neutral-600 mb-6">Mobile DMS for stock, orders, and invoices across outlets. Works offline
+              for reliable remote field operations.</p>
+            <div class="flex items-baseline gap-2">
+              <div class="text-3xl font-bold text-neutral-900">2x</div>
+              <div class="text-sm text-neutral-600">Sales efficiency</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section id="tech" class="py-20 md:py-32 bg-white">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-3">Tech Stack & Integrations</h2>
+          <p class="text-lg text-neutral-600">Battle-tested choices for speed, reliability, and scale.</p>
+        </div>
+        
+        <!-- Tech Categories Grid -->
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Frontend -->
+          <div class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:laptop" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <h3 class="text-lg font-bold text-neutral-900 pr-12">Frontend</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                React
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Next.js
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Tailwind CSS
+              </li>
+            </ul>
+          </div>
+
+          <!-- Backend -->
+          <div class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:server-stack-03" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <h3 class="text-lg font-bold text-neutral-900 pr-12">Backend</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Node.js
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                FastAPI
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Django
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Spring Boot
+              </li>
+            </ul>
+          </div>
+
+          <!-- AI/ML -->
+          <div class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:artificial-intelligence-04" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <h3 class="text-lg font-bold text-neutral-900 pr-12">AI/ML</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                LangChain
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                OpenAI
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Claude
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                RAG & Vector DBs
+              </li>
+            </ul>
+          </div>
+
+          <!-- Infrastructure -->
+          <div class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:cloud" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <h3 class="text-lg font-bold text-neutral-900 pr-12">Infrastructure</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                AWS
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Docker
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Redis
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Kafka
+              </li>
+            </ul>
+          </div>
+
+          <!-- Messaging -->
+          <div class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:message-01" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <h3 class="text-lg font-bold text-neutral-900 pr-12">Messaging</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                WhatsApp APIs
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                CTWA
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                Petpooja
+              </li>
+              <li class="text-sm text-neutral-600 flex items-center gap-2">
+                <span class="w-1 h-1 bg-neutral-400 rounded-full"></span>
+                LeadSquared
+              </li>
+            </ul>
+          </div>
+
+          <!-- CTA Card -->
+          <div class="group relative bg-white border border-neutral-200 rounded-xl p-6 hover:border-neutral-900 hover:shadow-lg transition-all duration-300">
+            <div class="absolute top-5 right-5 w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center">
+              <iconify-icon icon="hugeicons:code" width="20" height="20" class="text-neutral-900"></iconify-icon>
+            </div>
+            <div class="mb-3">
+              <h3 class="text-lg font-bold text-neutral-900 pr-12">Custom Architecture?</h3>
+            </div>
+            <p class="text-sm text-neutral-600 mb-6">Let's discuss your specific tech requirements and build the perfect solution.</p>
+            <a href="contact.html" class="inline-flex items-center gap-2 px-4 py-2 bg-neutral-900 text-white rounded-lg text-sm font-medium hover:bg-neutral-800 transition-colors">
+              Discuss Architecture
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY + SECURITY -->
+    <section id="why" class="py-20 md:py-32 bg-white">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        <div class="grid gap-16 lg:grid-cols-2">
+          <div class="bg-gradient-to-br from-neutral-50 to-white border-2 border-neutral-200 rounded-3xl p-10">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-8">Why Senslyze?</h2>
+            <div class="space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-bold text-neutral-900">15+ products shipped</div>
+                  <div class="text-sm text-neutral-600">Radius, Tubulu, Fynzon, and more</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-bold text-neutral-900">Active in 10+ sectors</div>
+                  <div class="text-sm text-neutral-600">Govt, E‑com, Beauty, Crypto, QSR</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-bold text-neutral-900">Custom-built & white-labeled</div>
+                  <div class="text-sm text-neutral-600">Tailored solutions for your brand</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-bold text-neutral-900">AI-native from day one</div>
+                  <div class="text-sm text-neutral-600">Multi-agent, OCR, RAG, flows</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+          <div>
+                  <div class="font-bold text-neutral-900">Flexible deployment</div>
+                  <div class="text-sm text-neutral-600">On-premise & hybrid support</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-3xl p-10 text-white">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-8">Security & Compliance</h2>
+            <div class="space-y-5">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <iconify-icon icon="hugeicons:shield-key" width="20" height="20"></iconify-icon>
+                </div>
+                <div>
+                  <div class="font-bold">GDPR-ready</div>
+                  <div class="text-sm text-neutral-300">Full compliance with data protection</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <iconify-icon icon="hugeicons:lock-key" width="20" height="20"></iconify-icon>
+                </div>
+                <div>
+                  <div class="font-bold">PII masking & encryption</div>
+                  <div class="text-sm text-neutral-300">Enterprise-grade security</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <iconify-icon icon="hugeicons:user-check-02" width="20" height="20"></iconify-icon>
+                </div>
+                <div>
+                  <div class="font-bold">Role-based access control</div>
+                  <div class="text-sm text-neutral-300">Granular permissions & audit logs</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <iconify-icon icon="hugeicons:analytics-03" width="20" height="20"></iconify-icon>
+          </div>
+          <div>
+                  <div class="font-bold">Observability & analytics</div>
+                  <div class="text-sm text-neutral-300">Agent evaluation and monitoring</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-20 md:py-32 bg-gradient-to-b from-neutral-50 to-white">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight">What Clients Say</h2>
+          <p class="mt-4 text-lg text-neutral-600">Social proof you can feel.</p>
+        </div>
+        <div class="grid gap-8 md:grid-cols-2">
+          <blockquote class="relative bg-white border-2 border-neutral-200 rounded-3xl p-10 hover:border-neutral-300 transition-all duration-300">
+            <div class="absolute -top-4 -left-4 w-12 h-12 bg-neutral-900 rounded-2xl flex items-center justify-center text-white text-2xl">"</div>
+            <p class="text-lg text-neutral-800 leading-relaxed mb-6">With Senslyze, we launched a 24x7 WhatsApp bot that saved 100s of hours in admissions support.</p>
+            <footer class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold">
+                U
+              </div>
+              <div>
+                <div class="font-semibold text-neutral-900">University Client</div>
+                <div class="text-sm text-neutral-600">Education Sector</div>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="relative bg-white border-2 border-neutral-200 rounded-3xl p-10 hover:border-neutral-300 transition-all duration-300">
+            <div class="absolute -top-4 -left-4 w-12 h-12 bg-neutral-900 rounded-2xl flex items-center justify-center text-white text-2xl">"</div>
+            <p class="text-lg text-neutral-800 leading-relaxed mb-6">The refill predictor built by Senslyze helped us forecast demand with 85%+ accuracy.</p>
+            <footer class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white font-bold">
+                H
+              </div>
+              <div>
+                <div class="font-semibold text-neutral-900">Petroleum Client</div>
+                <div class="text-sm text-neutral-600">Energy Sector</div>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA BAND -->
+    <section id="contact" class="relative isolate overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-950 to-black py-24 md:py-32 text-white">
+      <!-- Decorative elements -->
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.05)_0%,_transparent_50%)]"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-neutral-800/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-neutral-800/20 rounded-full blur-3xl"></div>
+      
+      <div class="relative mx-auto max-w-5xl px-6 md:px-8 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur text-white text-sm font-medium mb-8">
+          <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+          <span>Ready to Transform Your Business?</span>
+        </div>
+        
+        <h2 class="text-4xl md:text-6xl font-black tracking-tight">Let's build something brilliant together.</h2>
+        <p class="mt-6 text-xl md:text-2xl text-neutral-300 max-w-3xl mx-auto">Get your own platform, AI agent, or WhatsApp bot — <span class="text-white font-semibold">in under 30 days.</span></p>
+        
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contact.html" class="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-neutral-900 rounded-xl font-semibold text-lg shadow-2xl hover:bg-neutral-100 hover:scale-105 transition-all duration-200">
+            Book a Strategy Call
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="https://wa.me/919325716883" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur border-2 border-white/20 text-white rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-200">
+            <iconify-icon icon="hugeicons:whatsapp" width="24" height="24"></iconify-icon>
+            Chat on WhatsApp
+          </a>
+        </div>
+        
+        <div class="mt-12 flex items-center justify-center gap-8 text-sm text-neutral-400">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Free Consultation</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>No Commitment</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>24hr Response</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-neutral-50 py-16">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        <div class="grid gap-12 lg:grid-cols-12">
+          <!-- Brand Column -->
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-3 mb-5">
+              <img src="assets/logos/senslyse_logo.svg" alt="Senslyze" class="h-12 md:h-14 w-auto invert" />
+            </div>
+            <p class="text-neutral-600 mb-6">Channelizing Your Ideas to Products. An IT services company specializing in product engineering, automation, and messaging.</p>
+              <div class="flex items-center gap-4">
+              <a href="https://www.facebook.com/profile.php?id=61551632660784" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-neutral-600 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors" aria-label="Visit our Facebook page">
+                <iconify-icon icon="hugeicons:facebook-01" width="20" height="20"></iconify-icon>
+              </a>
+              <a href="https://twitter.com/senslyze" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-neutral-600 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors" aria-label="Follow us on Twitter">
+                <iconify-icon icon="hugeicons:twitter" width="20" height="20"></iconify-icon>
+              </a>
+              <a href="https://www.linkedin.com/in/senslyze-business-b84213289/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-neutral-600 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors" aria-label="Connect with us on LinkedIn">
+                <iconify-icon icon="hugeicons:linkedin-01" width="20" height="20"></iconify-icon>
+              </a>
+              <a href="https://www.instagram.com/senslyze/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-neutral-600 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors" aria-label="Follow us on Instagram">
+                <iconify-icon icon="hugeicons:instagram" width="20" height="20"></iconify-icon>
+              </a>
+                </div>
+              </div>
+          
+          <!-- Links Columns -->
+          <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="font-bold text-neutral-900 mb-4">Services</h3>
+              <ul class="space-y-3 text-sm text-neutral-600">
+                <li><a href="#services" class="hover:text-neutral-900 transition-colors">Product Engineering</a></li>
+                <li><a href="#services" class="hover:text-neutral-900 transition-colors">AI & Automation</a></li>
+                <li><a href="#services" class="hover:text-neutral-900 transition-colors">Messaging & CX</a></li>
+              </ul>
+              </div>
+            <div>
+              <h3 class="font-bold text-neutral-900 mb-4">Company</h3>
+              <ul class="space-y-3 text-sm text-neutral-600">
+                <li><a href="#about" class="hover:text-neutral-900 transition-colors">About Us</a></li>
+                <li><a href="#case-studies" class="hover:text-neutral-900 transition-colors">Case Studies</a></li>
+                <li><a href="contact.html" class="hover:text-neutral-900 transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold text-neutral-900 mb-4">Contact</h3>
+              <ul class="space-y-3 text-sm text-neutral-600">
+                <li><a href="mailto:senslyzeforbusiness@gmail.com" class="hover:text-neutral-900 transition-colors">Email Us</a></li>
+                <li><a href="tel:+919325716883" class="hover:text-neutral-900 transition-colors" aria-label="Call us at plus nine one nine three two five seven one six eight eight three" title="Call Us">Call Us</a></li>
+                <li><a href="https://wa.me/919325716883" target="_blank" class="hover:text-neutral-900 transition-colors">WhatsApp</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 pt-8 border-t border-neutral-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-sm text-neutral-600">© <span id="year"></span> Senslyze. All rights reserved.</div>
+          <div class="flex items-center gap-6 text-sm text-neutral-600">
+            <a href="contact.html" class="hover:text-neutral-900 transition-colors">Privacy Policy</a>
+            <a href="contact.html" class="hover:text-neutral-900 transition-colors">Terms of Service</a>
+          </div>
+        </div>
+        
+        <script>
+          document.getElementById('year').textContent = new Date().getFullYear();
+          
+          // Mobile menu toggle
+          const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+          
+          mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+          });
+          
+          // Close menu when clicking outside
+          document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+              mobileMenu.classList.remove('active');
+            }
+          });
+          
+          // Close menu when clicking a link
+          mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.remove('active');
+            });
+          });
+        </script>
+
+        <!-- CSS Animations -->
+        <style>
+          /* Animation classes */
+          .animate-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+          }
+          
+          .animate-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          
+          .animate-slide-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+          }
+          
+          .animate-slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          
+          .animate-scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+          }
+          
+          .animate-scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+          }
+          
+          .animate-stagger {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+          }
+          
+          .animate-stagger.visible {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          
+          /* Hover animations */
+          .group {
+            transition: transform 0.3s ease-out;
+          }
+          
+          .group:hover {
+            transform: translateY(-4px);
+          }
+        </style>
+
+        <!-- Animation Script -->
+        <script>
+          // Custom intersection observer for inView functionality
+          const createInViewObserver = (callback, options = { amount: 0.2 }) => {
+            return new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  callback(entry.target);
+                }
+              });
+            }, {
+              threshold: options.amount
+            });
+          };
+
+          // Animate elements on scroll
+          const animateOnScroll = () => {
+            // Hero section animations
+            const heroTitle = document.querySelector('h1');
+            const heroDescription = document.querySelector('section p');
+            const heroBadge = document.querySelector('section .inline-flex');
+            const heroButtons = document.querySelectorAll('section a');
+
+            // Add animation classes to hero elements
+            if (heroBadge) {
+              heroBadge.classList.add('animate-fade-in');
+              setTimeout(() => heroBadge.classList.add('visible'), 100);
+            }
+
+            if (heroTitle) {
+              heroTitle.classList.add('animate-fade-in');
+              setTimeout(() => heroTitle.classList.add('visible'), 200);
+            }
+
+            if (heroDescription) {
+              heroDescription.classList.add('animate-fade-in');
+              setTimeout(() => heroDescription.classList.add('visible'), 300);
+            }
+
+            heroButtons.forEach((btn, index) => {
+              btn.classList.add('animate-fade-in');
+              setTimeout(() => btn.classList.add('visible'), 400 + (index * 100));
+            });
+
+            // Animate cards in sections
+            const animateCards = (selector, staggerDelay = 100) => {
+              const cards = document.querySelectorAll(selector);
+              cards.forEach((card, index) => {
+                card.classList.add('animate-slide-up');
+                const observer = createInViewObserver(() => {
+                  setTimeout(() => {
+                    card.classList.add('visible');
+                  }, index * staggerDelay);
+                  observer.unobserve(card);
+                }, { amount: 0.2 });
+                observer.observe(card);
+              });
+            };
+
+            // Animate section headings
+            const animateHeadings = () => {
+              const headings = document.querySelectorAll('section h2');
+              headings.forEach(heading => {
+                heading.classList.add('animate-fade-in');
+                const observer = createInViewObserver(() => {
+                  heading.classList.add('visible');
+                  observer.unobserve(heading);
+                }, { amount: 0.5 });
+                observer.observe(heading);
+              });
+            };
+
+            // Apply animations
+            animateCards('#features .group', 100);
+            animateCards('#services .group', 150);
+            animateCards('#case-studies article', 100);
+            animateCards('#tech .group', 80);
+            animateCards('#industries .group', 80);
+            animateHeadings();
+
+            // Animate badges
+            const badges = document.querySelectorAll('section .inline-flex');
+            badges.forEach(badge => {
+              badge.classList.add('animate-scale-in');
+              const observer = createInViewObserver(() => {
+                badge.classList.add('visible');
+                observer.unobserve(badge);
+              }, { amount: 0.5 });
+              observer.observe(badge);
+            });
+
+            // Animate About section stats
+            const stats = document.querySelectorAll('#about .grid > div');
+            stats.forEach((stat, index) => {
+              stat.classList.add('animate-stagger');
+              const observer = createInViewObserver(() => {
+                setTimeout(() => {
+                  stat.classList.add('visible');
+                }, index * 100);
+                observer.unobserve(stat);
+              }, { amount: 0.3 });
+              observer.observe(stat);
+            });
+
+            // Animate testimonials
+            const testimonials = document.querySelectorAll('#testimonials blockquote');
+            testimonials.forEach((testimonial, index) => {
+              testimonial.classList.add('animate-slide-up');
+              const observer = createInViewObserver(() => {
+                setTimeout(() => {
+                  testimonial.classList.add('visible');
+                }, index * 150);
+                observer.unobserve(testimonial);
+              }, { amount: 0.2 });
+              observer.observe(testimonial);
+            });
+
+            // Animate CTA section
+            const ctaSection = document.querySelector('#contact');
+            if (ctaSection) {
+              const ctaElements = ctaSection.querySelectorAll('h2, p, a, .flex');
+              ctaElements.forEach((el, index) => {
+                el.classList.add('animate-fade-in');
+              });
+              
+              const observer = createInViewObserver(() => {
+                ctaElements.forEach((el, index) => {
+                  setTimeout(() => {
+                    el.classList.add('visible');
+                  }, index * 100);
+                });
+                observer.unobserve(ctaSection);
+              }, { amount: 0.3 });
+              observer.observe(ctaSection);
+            }
+          };
+
+          // Initialize animations when DOM is ready
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', animateOnScroll);
+          } else {
+            animateOnScroll();
+          }
+        </script>
+      </div>
+    </footer>
+  </body>
+  <!-- Inspiration: https://www.ito.ai/ -->
+  <!-- This is a static prototype. Replace placeholders with live content as needed. -->
+</html>
+
+
